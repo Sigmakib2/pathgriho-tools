@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Length Converter</title>
+    <meta name="description" content="Convert a unit of length to another unit such as meter (m), kilometer (km), centimeter (cm), feet (f), inch, mile, yard. Learn about length unit conversions.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="fev.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="bcdn.css">
+    <script src="jcdn.js"></script>
+    <script src="bcdn.js"></script>
+</head>
+<style>
+    .input {
+        width: 55%;
+        height: 34px;
+        outline: none;
+
+    }
+
+    .convert-button {
+        width: 40%;
+        height:40px;
+        background-color: rgb(12, 245, 136);
+        border-radius: 3px;
+        outline: none;
+    }
+    .linktext {
+        color: white;
+        font-size: medium;
+        text-decoration: none
+    }
+    footer {
+        background-color: #161E2C;
+        color: white;
+    }
+    footer a {
+        color: white;
+    }
+    footer a:hover {
+        color: greenyellow;
+    }
+    .socialicon {
+        height: 40px;
+        width: auto;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="jumbotron text-center" style="margin-bottom:0">
+            <h1>Length Converter</h1>
+            <p>Free Online Converter</p>
+        </div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand">Toolkib</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="toolkib-converters.html">Convertor</a></li>
+                        <li><a href="toolkib-online-generator.html">Online Generator</a></li>
+                        <li><a href="toolkib-mathmatical-tools.html">Mathematical Tools</a></li>
+                        <li><a href="toolkib-more-tools.html">More</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-8">
+                    <div class="well">
+
+                        <div>
+                            <form name="length_converter">
+
+                                <h4>From</h4>
+                                <select name=from_unit class="form-control" onChange="convert_unit()" ;>
+                                    <option> Centimeter</option>
+                                    <option> Meter</option>
+                                    <option> Kilometer</option>
+                                    <option> Mile</option>
+                                    <option> Inche</option>
+                                    <option> Feet</option>
+                                    <option> Yard</option>
+                                </select>
+                                <h4>To</h4>
+                                <select name=to_unit class="form-control" onChange="convert_unit()" ;>
+                                    <option> Centimeter</option>
+                                    <option> Meter</option>
+                                    <option> Kilometer</option>
+                                    <option> Mile</option>
+                                    <option> Inche</option>
+                                    <option> Feet</option>
+                                    <option> Yard</option>
+                                </select>
+                                <h4>Basic Formula</h4>
+                                <div id="formula" class="well"
+                                    style="font-size: 22px; text-align: center; color: white; margin-top: 10px; background-color: darkorange;">
+                                    <p>1 centimeters = 1 centimeters</p>
+                                </div>
+                                <h4>Enter Length</h4>
+                                <input type="number" name="from_value" class="form-control" value="1" size="12"
+                                    maxlength="12">
+                                <div style="text-align: center; margin-top: 15px;">
+                                    <input type=button value="Get Result" class="convert-button" onClick="convert_unit()" ;>
+                                </div>
+                                <div id="to_value" class="well"style="font-size: 25px; text-align: center; margin-top: 10px; background-color: aquamarine;">1</div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-4">
+                    <!-- place for ads, banner -->
+                   
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="text-center well">Length Converter</h2>
+            <div style="text-align: center;margin-bottom: 10px;">
+                <img src="Toolkib Thumbnail/length converter.png" class="img-thumbnail" alt="Length Converter"
+                    title="Length Converter">
+            </div>
+            <p>We need to measure length of various body is our everyday life. We need to convert Metric to Non-Metric, Non-Metric to Metric, Metric to Metric or Non-Metric to Non-Metric for various purposes. ToolKib’s Length Converter offers you to convert the length to different unit instantly and very easily. </p>
+            <p>To convert, you need to select the units to and from and then enter the length. Converted length will be shown below instantly. </p>
+            <div class="well">
+                <p>Short Note:</p>
+                <ul>
+                    <li>1 Centimeter = 0.01 Meter = 0.00001 Kilometer = 0.00000621 Mile = 0.3937 Inch = 0.0328 Feet = 0.01094 Yard</li>
+                    <li>1 Meter = 100 Centimeter = 0.001 Kilometer = 0.000621 Mile = 39.37 Inch = 3.28 Feet = 1.094 Yard</li>
+                    <li>1 Kilometer = 100000 Centimeter = 1000 Meter = 0.621 Mile = 39370 Inch = 3280 Feet = 1094 Yard</li>
+                    <li>1 Mile = 160934 Centimeter = 1609.34 Meter = 1.60934 Kilometer = 63360 Inch = 5280 Feet = 1760 Yard</li>
+                    <li>1 Inch = 2.54 Centimeter = 0.0254 Meter = 0.0000254 Kilometer = 0.0000158 Mile = 0.08333 Feet = 0.02778 Yard</li>
+                    <li>1 Feet = 30.48 Centimeter = 0.3048 Meter = 0.0003048 Kilometer = 0.0001896 Mile = 12 Inch = 0.3333 Yard</li>
+                    <li>1 Yard = 91.44 Centimeter = 0.9144 Meter = 0.0009144 Kilometer = 0.0005688 Mile = 36 Inch = 3 Feet</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4 text-center">
+                    <h3><a href="about.html">Toolkib</a></h3>
+                    <p>A Part Of Pathgriho Network</p>
+                    <p>&copy;<a href="https://pathgriho.com"> Pathgriho: Since 2020</a></p>
+                    <p>Find all type of helful online tools. Free to use. Easy to understand layout.</p>
+                    <p></p>
+                </div>
+                <div class="col-sm-3">
+                    <h3>More Tools</h3>
+                    <ul>
+                        <li><a href="weight-converter.html" class="linktext">Weight Converter</a></li>
+                        <li><a href="age-calculator.html" class="linktext">Age Calculator</a></li>
+                        <li><a href="binary-decimal-hexadecimal-converter.html" class="linktext">Number Converter</a>
+                        </li>
+                        <li><a href="measure-monitor-size.html" class="linktext">Measure Monitor Size</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h3>Our Policies</h3>
+                    <ul>
+                        <li><a href="contact-us.html" class="linktext">Contact Us</a></li>
+                        <li><a href="disclaimer.html" class="linktext">Disclaimer</a></li>
+                        <li><a href="privacy-policy.html" class="linktext">Privacy Policy</a></li>
+                        <li><a href="terms-and-conditions.html" class="linktext">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h3>Follow us on</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/pathgriho71" class="linktext">Facebook</a></li>
+                        <li><a href="https://www.pathgriho.com" class="linktext">Pathgriho Blog</a></li>
+                        <li><a href="https://tech.pathgriho.com" class="linktext">Techkib Blog</a></li>
+                        <li><a href="https://dm.pathgriho.com" class="linktext">Different Marketing</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="text-align: center;">
+            <p><a href="https://www.facebook.com/pathgriho71" class="footericon"><img src="facebook.svg"
+                        class="socialicon"></a>
+                <a href="https://www.linkedin.com/company/pathgriho-network" class="footericon"><img src="linkedin.svg"
+                        class="socialicon"></a>
+                <a href="https://sigmakib2.github.io/pathgriho-network-dev/" class="footericon"><img src="github.svg" class="socialicon"></a></p>
+            <p>Developers: <a href="https://www.linkedin.com/in/sakib-mahmud-175575192" style="color: turquoise;">Sakib Mahmud</a> and <a href="https://www.linkedin.com/in/rabi0249/"
+                    style="color: turquoise;">Mohammad Rabiul Mollah</a></p>
+        </div>
+    </footer>
+    <script src="length-converter.js"></script>
+</body>
+
+</html>

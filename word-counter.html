@@ -2,18 +2,29 @@
 <html lang="en">
 
 <head>
-    <title>Privacy Policy</title>
-    <meta name="description" content="Privacy Policy of toolkib.">
+    <title>Word and Character Counter</title>
+    <meta name="description" content="Easily count the character and word of a text. Copy and paste or drag and drop the selected text and this tool will count the number of characters and words.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bcdn.css">
     <link rel="icon" href="fev.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="bcdn.css">
     <script src="jcdn.js"></script>
     <script src="bcdn.js"></script>
-    
 </head>
 <style>
-  .linktext {
+    .input {
+        width: 55%;
+        height: 34px;
+        outline: none;
+    }
+    .convert-button {
+        width: 40%;
+        height: 40px;
+        background-color: rgb(12, 245, 136);
+        border-radius: 3px;
+        outline: none;
+    }
+    .linktext {
         color: white;
         font-size: medium;
         text-decoration: none
@@ -33,11 +44,12 @@
         width: auto;
     }
 </style>
+
 <body>
     <header>
         <div class="jumbotron text-center" style="margin-bottom:0">
-            <h1>Privacy Policy</h1>
-            <p>For Toolkib</p>
+            <h1>Word Counter</h1>
+            <p>A tool for Word and Character counting</p>
         </div>
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -61,76 +73,50 @@
             </div>
         </nav>
     </header>
-
     <main>
         <div class="container">
-        <p><b>Toolkib</b>, accessible from https://tools.pathgriho.com, one of our main
-            priorities
-            is the
-            privacy of our visitors. This Privacy Policy document contains types of information that are
-            collected
-            and recorded by Different Marketing and how we use it.</br>
-            If you have additional questions or require more information about our Privacy Policy, do not
-            hesitate
-            to contact us.</p>
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="well">
+                        <h4>Start typing or copy and paste your text here</h4>
+                        <textarea class="form-control" id="text" placeholder="Type or paste text here..." rows="10"
+                            style="resize: vertical;" oninput="countWord()"></textarea>
 
-        <p></p>
-        <h3>Log Files:</h3>
-        Toolkib follows a standard procedure of using log files. These files log visitors when
-        they
-        visit websites. All hosting companies do this and a part of hosting services' analytics. The
-        information
-        collected by log files includes internet protocol (IP) addresses, browser type, Internet Service
-        Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These
-        are
-        not linked to any information that is personally identifiable. The purpose of the information is for
-        analyzing trends, administering the site, tracking users' movement on the website, and gathering
-        demographic information.</p>
+                        <div style="margin-top: 10px; margin-bottom: 10px;">
+                            <input id='undo' type='button' value='Undo' class="btn-primary" />
+                            <input id='redo' type='button' value='Redo' class="btn-warning" />
+                            <input onclick="document.getElementById('text').value = ''" type='button' value='Clear'
+                                class="btn-danger" />
+                            <input id='save' type='button' value='Save' class="btn-success" />
+                        </div>
+                        <div class="well" style="text-align: center; font-size: 25px;">
+                            <span id="show"></span>
+                            <span id="she"></span>
+                        </div>
+                    </div>
 
-        <h3>Cookies and Web Beacons:</h3>
-        <p>Like any other website, Toolkib uses 'cookies'. These cookies are used to store
-            information including visitors' preferences, and the pages on the website that the visitor
-            accessed
-            or visited. The information is used to optimize the users' experience by customizing our web
-            page
-            content based on visitors' browser type and/or other information.
+                </div>
 
-        <h3>Google DoubleClick DART Cookie:</h3>
-        <p> Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies.
-            However, visitors may choose to decline the use of DART cookies by visiting the Google ad and
-            content network Privacy Policy at the following URL –
-            https://policies.google.com/technologies/ads
-        </p>
-
-
-        <h3>Children's Information:</h3>
-        <p>Another part of our priority is adding protection for children while using the internet. We
-            encourage
-            parents and guardians to observe, participate in, and/or monitor and guide their online
-            activity.
-            Toolkib does not knowingly collect any Personal Identifiable Information from
-            children
-            under
-            the age of 13. If you think that your child provided this kind of information on our website, we
-            strongly encourage you to contact us immediately and we will do our best efforts to promptly
-            remove
-            such
-            information from our records.</p>
-
-        <h3>Online Privacy Policy Only:</h3>
-        <p>This Privacy Policy applies only to our online activities and is valid for visitors to our
-            website
-            with
-            regards to the information that they shared and/or collect in Toolkib. This policy
-            is
-            not
-            applicable to any information collected offline or via channels other than this website.</p>
-
-        <h3>Consent:</h3>
-        <p>By using our website, you hereby consent to our Privacy Policy and agree to its Terms and
-            Conditions.
-        </p>
-    </div>
+                <div class="col-sm-4">
+                   <!-- place ads here -->
+                   
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="well">Words and Characters Counter</h2>
+            
+            <div style="text-align: center;margin-bottom: 10px;">
+                <img src="Toolkib Thumbnail/Words and Character Counter.png" class="img-thumbnail" alt="Words and Character Counter"
+                    title="Words and Character Counter">
+            </div>
+            <p style="font-size: large;">Sometimes content writer needs to be bound by character or word limit. For example, if you want to set a meta description for your content, you should finish that at 150 to 160 characters. If you use Google Blogger, you are not permissible to cross 150. Again, sometimes many people need to count characters and words for many reasons. For another instance, you have organized a competition and fixed the word limit to 200 for the participants. You will need the help of “Online Word Counter” to check have they really followed the rules or not. And for these reasons, <b>ToolKib</b> has brought to you a simple but very effective “Free Words and Characters Counter”. </p>
+            <p style="font-size: large;">ToolKib’s this tool is very much easier to use and also very simple to understand it’s every part. You can simply count words and characters. (ToolKib marks space as a character because it is standard.)</p>
+            <p style="font-size: large;">Knowing how many words the article or content contains helps the author and reader both. The reader can understand if the content is being too long then 60 to 75% of the readers won’t finish it. Again, if any reader knows the length of the writing, he can take decision either to go through the content or not.</p>
+            <h3>How to Use ToolKib’s Words and Characters Counter?</h3>
+            <p style="font-size: large;">Just copy the whole text on the text area above or write your text. You will be able to see the words and characters number under the box instantly. It’s like Abracadabra. Sometimes it can differ from some other free online tools. You can Undo, Redo, Clear or Save from here as well.</p>
+            <p style="font-size: large;">This content has 276 words and 1586 character.</p>
+        </div>
     </main>
     <footer>
         <div class="container-fluid">
@@ -138,15 +124,15 @@
                 <div class="col-sm-4 text-center">
                     <h3><a href="about.html">Toolkib</a></h3>
                     <p>A Part Of Pathgriho Network</p>
-                    <p>&copy;<a href="https://pathgriho.com"> Pathgriho 2020</a></p>
+                    <p>&copy;<a href="https://pathgriho.com"> Pathgriho: Since 2020</a></p>
                     <p>Find all type of helful online tools. Free to use. Easy to understand layout.</p>
                     <p></p>
                 </div>
                 <div class="col-sm-3">
                     <h3>More Tools</h3>
                     <ul>
-                        <li><a href="length-converter.html" class="linktext">Length Converter</a></li>
-                        <li><a href="international-dialing-codes.html" class="linktext">Country and ISO Code</a></li>
+                        <li><a href="weight-converter.html" class="linktext">Weight Converter</a></li>
+                        <li><a href="password-generator.html" class="linktext">Password Generator</a></li>
                         <li><a href="binary-decimal-hexadecimal-converter.html" class="linktext">Number Converter</a>
                         </li>
                         <li><a href="measure-monitor-size.html" class="linktext">Measure Monitor Size</a></li>
@@ -182,6 +168,7 @@
                     style="color: turquoise;">Mohammad Rabiul Mollah</a></p>
         </div>
     </footer>
+    <script src="word-counter.js"></script>
 </body>
 
 </html>

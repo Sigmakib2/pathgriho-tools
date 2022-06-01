@@ -2,18 +2,30 @@
 <html lang="en">
 
 <head>
-    <title>Privacy Policy</title>
-    <meta name="description" content="Privacy Policy of toolkib.">
+    <title>Binary, Decimal, Hexadecimal, Octal Converter</title>
+    <meta name="description" content="This tool will help you to convert a number into Binary, Decimal, Hexadecimal, Octal. Easy to use number conversion tool.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bcdn.css">
     <link rel="icon" href="fev.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="bcdn.css">
     <script src="jcdn.js"></script>
     <script src="bcdn.js"></script>
-    
 </head>
 <style>
-  .linktext {
+    .input {
+        width: 55%;
+        height: 34px;
+        outline: none;
+
+    }
+    .convert-button {
+        width: 40%;
+        height: 34px;
+        background-color: rgb(12, 245, 136);
+        border-radius: 3px;
+        outline: none;
+    }
+    .linktext {
         color: white;
         font-size: medium;
         text-decoration: none
@@ -36,8 +48,8 @@
 <body>
     <header>
         <div class="jumbotron text-center" style="margin-bottom:0">
-            <h1>Privacy Policy</h1>
-            <p>For Toolkib</p>
+            <h1>Binary, Decimal, Hexadecimal, Octal Converter</h1>
+            <p>Free Online Tool for Number Conversions</p>
         </div>
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -64,73 +76,56 @@
 
     <main>
         <div class="container">
-        <p><b>Toolkib</b>, accessible from https://tools.pathgriho.com, one of our main
-            priorities
-            is the
-            privacy of our visitors. This Privacy Policy document contains types of information that are
-            collected
-            and recorded by Different Marketing and how we use it.</br>
-            If you have additional questions or require more information about our Privacy Policy, do not
-            hesitate
-            to contact us.</p>
+            <div class="row">
 
-        <p></p>
-        <h3>Log Files:</h3>
-        Toolkib follows a standard procedure of using log files. These files log visitors when
-        they
-        visit websites. All hosting companies do this and a part of hosting services' analytics. The
-        information
-        collected by log files includes internet protocol (IP) addresses, browser type, Internet Service
-        Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These
-        are
-        not linked to any information that is personally identifiable. The purpose of the information is for
-        analyzing trends, administering the site, tracking users' movement on the website, and gathering
-        demographic information.</p>
+                <div class="col-sm-8">
+                    <div class="well">
+                        <h4>From</h4>
+                        <select name="" id="from" class="form-control">
+                            <option value="Decimal">Decimal</option>
+                            <option value="Binary">Binary</option>
+                            <option value="Octal">Octal</option>
+                            <option value="Hexadecimal">Hexa Decimal</option>
+                        </select>
+                        <h4>To</h4>
+                        <select name="" id="to" class="form-control">
+                            <option value="Decimal">Decimal</option>
+                            <option value="Binary">Binary</option>
+                            <option value="Octal">Octal</option>
+                            <option value="Hexadecimal">Hexa Decimal</option>
+                        </select>
+                        <h4>Enter The Number You Want To Convert</h4>
+                        <input type="text" class="form-control" placeholder="Enter Your number" maxlength="15"
+                            id="inputnumber"><br>
+                        <div style="text-align: center;">
+                            <input type="submit" class="convert-button" value="convert now" id="inputsubmit">
+                        </div>
+                        <div id="convert" style="font-size: 25px; margin-top: 20px;">
+                        </div>
+                    </div>
+                </div>
 
-        <h3>Cookies and Web Beacons:</h3>
-        <p>Like any other website, Toolkib uses 'cookies'. These cookies are used to store
-            information including visitors' preferences, and the pages on the website that the visitor
-            accessed
-            or visited. The information is used to optimize the users' experience by customizing our web
-            page
-            content based on visitors' browser type and/or other information.
-
-        <h3>Google DoubleClick DART Cookie:</h3>
-        <p> Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies.
-            However, visitors may choose to decline the use of DART cookies by visiting the Google ad and
-            content network Privacy Policy at the following URL –
-            https://policies.google.com/technologies/ads
-        </p>
-
-
-        <h3>Children's Information:</h3>
-        <p>Another part of our priority is adding protection for children while using the internet. We
-            encourage
-            parents and guardians to observe, participate in, and/or monitor and guide their online
-            activity.
-            Toolkib does not knowingly collect any Personal Identifiable Information from
-            children
-            under
-            the age of 13. If you think that your child provided this kind of information on our website, we
-            strongly encourage you to contact us immediately and we will do our best efforts to promptly
-            remove
-            such
-            information from our records.</p>
-
-        <h3>Online Privacy Policy Only:</h3>
-        <p>This Privacy Policy applies only to our online activities and is valid for visitors to our
-            website
-            with
-            regards to the information that they shared and/or collect in Toolkib. This policy
-            is
-            not
-            applicable to any information collected offline or via channels other than this website.</p>
-
-        <h3>Consent:</h3>
-        <p>By using our website, you hereby consent to our Privacy Policy and agree to its Terms and
-            Conditions.
-        </p>
-    </div>
+                <div class="col-sm-4">
+                    <!-- place for ads, banner -->
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="text-center well">Binary Octal Decimal Hexadecimal Converter</h2>
+            <div style="text-align: center;">
+                <img src="Toolkib Thumbnail/number converter.png" class="img-thumbnail" alt="number converter" title="number converter">
+                </div>
+            <p>Binary, Octal, Decimal, Hexadecimal are some number method. Binary has 2 digits (0 and 1). Octal has 8 digits (0-7), decimal has 10 digits (0-9) and hexadecimal has 16 digits (0-9 and A-F). Different number method is used in different place. Binary is being used in Computer system. All the commands are being done via computer using two digits, 0 and 1. In our normal life we generally use decimal system. </p>
+            <ul>
+                <li>Binary (Base 2) – 0 and 1</li>
+                <li>Octal (Base 8) - 0, 1, 2, 3, 4, 5, 6, 7</li>
+                <li>Decimal (Base 10) – 0, 1, 2, 3, 4, 5, 6, 7, 8, 9</li>
+                <li>Hexa-decimal (Base 16) – 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F</li>
+            </ul>
+            <p>Sometimes, converting these numbers becomes important. That’s why ToolKib brought to you Free Online Binary-Octal-decimal-Hexadecimal Converter.</p>
+            <p>For example, the number 25 in decimal is 11011 in Binary, 31 in Octal, 19 in Hexadecimal.</p>
+        </div>
     </main>
     <footer>
         <div class="container-fluid">
@@ -138,18 +133,18 @@
                 <div class="col-sm-4 text-center">
                     <h3><a href="about.html">Toolkib</a></h3>
                     <p>A Part Of Pathgriho Network</p>
-                    <p>&copy;<a href="https://pathgriho.com"> Pathgriho 2020</a></p>
+                    <p>&copy;<a href="https://pathgriho.com"> Pathgriho: Since 2020</a></p>
                     <p>Find all type of helful online tools. Free to use. Easy to understand layout.</p>
                     <p></p>
                 </div>
                 <div class="col-sm-3">
                     <h3>More Tools</h3>
                     <ul>
-                        <li><a href="length-converter.html" class="linktext">Length Converter</a></li>
+                        <li><a href="weight-converter.html" class="linktext">Weight Converter</a></li>
                         <li><a href="international-dialing-codes.html" class="linktext">Country and ISO Code</a></li>
-                        <li><a href="binary-decimal-hexadecimal-converter.html" class="linktext">Number Converter</a>
+                        <li><a href="length-converter.html" class="linktext">Length Converter</a>
                         </li>
-                        <li><a href="measure-monitor-size.html" class="linktext">Measure Monitor Size</a></li>
+                        <li><a href="circles-area-counter.html" class="linktext">Circle Area Counter</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
@@ -178,10 +173,11 @@
                 <a href="https://www.linkedin.com/company/pathgriho-network" class="footericon"><img src="linkedin.svg"
                         class="socialicon"></a>
                 <a href="https://sigmakib2.github.io/pathgriho-network-dev/" class="footericon"><img src="github.svg" class="socialicon"></a></p>
-            <p>Developers: <a href="https://www.linkedin.com/in/sakib-mahmud-175575192" style="color: turquoise;">Sakib Mahmud</a> and <a href="https://www.linkedin.com/in/rabi0249"
+            <p>Developers: <a href="https://www.linkedin.com/in/sakib-mahmud-175575192" style="color: turquoise;">Sakib Mahmud</a> and <a href="https://www.linkedin.com/in/rabi0249/"
                     style="color: turquoise;">Mohammad Rabiul Mollah</a></p>
         </div>
     </footer>
+    <script src="binary-decimal-hexadecimal-converter.js"></script>
 </body>
 
 </html>

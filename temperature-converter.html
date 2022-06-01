@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Temperature Converter</title>
+    <meta name="description" content="Convert temperature into Celsius, Fahrenheit, Kelvin. This online calculator will help you to convert temperature units.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="fev.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="bcdn.css">
+    <script src="jcdn.js"></script>
+    <script src="bcdn.js"></script>
+   
+    <style>
+     *   {
+    box-sizing: border-box;
+}
+.yes {
+    background-color:rgb(10, 240, 109);
+    margin: 0;
+    border:0;
+    border-radius: 12px;
+    padding: 9px;
+    font-weight: bold;
+}
+.yes:hover {
+    background-color:seagreen;
+    color:white;
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+
+footer {
+    background-color:#161E2C ;
+    color: white;
+}
+footer a {
+    color: white;
+}
+footer a:hover {
+    color:greenyellow;
+}
+.socialicon {
+    height: 40px;
+    width: auto;
+    
+}
+@media screen and (max-width:600px) {
+    .no {
+        width:90%;
+        height:50px;
+    }
+}
+    </style>  
+</head>
+
+
+<body>
+    <header>
+        <div class="jumbotron text-center" style="margin-bottom:0">
+            <h1>Temperature Converter</h1>
+            <p>Toolkib</p>
+            <p>Ready to Provide Your Desired Tools</p>
+        </div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand">Toolkib</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="toolkib-converters.html">Convertor</a></li>
+                        <li><a href="toolkib-online-generator.html">Online Generator</a></li>
+                        <li><a href="toolkib-mathmatical-tools.html">Mathematical Tools</a></li>
+                        <li><a href="toolkib-more-tools.html">More</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+    
+                <div class="col-sm-8">
+                    <div class="well text-center">
+                        <form name="circle">
+                            <h2>Celcius To Fahrenheit</h2>
+                            <br/>
+                            <input type="text" name="radius" placeholder="Enter the Celcius Value" size="20"><br /><br/>
+                            <input class="yes px-3 py-2" type="button" value="Convert to Fahrenheit" onClick="calculateAC()"><br /><br/>        
+                            <input type="text" name="acc" placeholder="Fahrenheit Value is here" size="20"><br /><br/>
+                            <input class="yes px-3 py-2" type="reset" value="Try Another One" />
+                            <br/><br/>
+     
+                        </form>
+                        <form name="ck">
+                            <h2>Celcius to Kelvin</h2>
+                            <br/>
+                            <input type="text" name="fahrenh" placeholder="Enter the Celcius value" size="20"><br /><br/>
+                            <input class="yes px-3 py-2" type="button" value="Convert to Kelvin" onClick="calculateCK()"><br /><br/>
+                            <input type="text" name="adc" placeholder="Kelvin value is here" size="20"><br /><br/>
+                            <input class="yes px-3 py-2" type="reset" value="Try Another One" />
+                            <br/><br/>
+                        </form>
+                        <form name="fc">
+                            <h2>Fahrenheit to Celcius</h2>
+                            <br/>
+                            <input type="text" name="fahrenh" placeholder="Value at Fahrenheit" size="20"><br /><br/>
+                            <input class="yes px-3 py-2" type="button" value="Convert to Celcius" onClick="calculateFC()"><br /><br/>
+                            <input type="text" name="accc" placeholder="Kelvin value is here" size="20"><br /><br/>
+                            <input class="yes px-3 py-2" type="reset" value="Try Another One" />
+                            <br/><br/>
+                        </form>
+                        <form name="fk">
+                            <h2>Fahrenheit to Kelvin</h2>
+                            <br/>
+                            <input type="text" name="fahrenh" placeholder="Enter the Fahrenheit Value" size="20"><br /><br/>
+                            <input class="yes px-3 py-2" type="button" value="Convert to Kelvin" onClick="calculateFK()"><br /><br/>
+                            <input type="text" name="ad" placeholder="Kelvin value is here" size="20"><br /><br/>
+                            <input class="yes px-3 py-2" type="reset" value="Try Another One" />
+                            <br/><br/>
+                        </form>
+                        <form name="kc">
+                            <h2>Kelvin to Celcius</h2>
+                            <br/>
+                            <input type="text" name="fahrenh" placeholder="Diameter of the Circle" size="20"><br /><br/>
+                            <input class="yes px-3 py-2" type="button" value="Convert to Kelvin" onClick="calculateKC()"><br /><br/>
+                            <input type="text" name="rabiul" placeholder="Kelvin value is here" size="20"><br /><br/>
+                            <input class="yes px-3 py-2" type="reset" value="Try Another One" />
+                            <br/><br/>
+                        </form>
+                        <form name="kf">
+                            <h2>Kelvin to Fahrenheit</h2>
+                            <br/>
+                            <input type="text" name="fahrenh" placeholder="Diameter of the Circle" size="20"><br /><br/>
+                            <input class="yes px-3 py-2" type="button" value="Convert to Kelvin" onClick="calculateKF()"><br /><br/>
+                            <input type="text" name="roko" placeholder="Kelvin value is here" size="20"><br /><br/>
+                            <input class="yes px-3 py-2" type="reset" value="Try Another One" />
+                            <br/><br/>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-sm-4">
+                    <!-- place for ads, banner -->
+                   
+                </div>
+    
+            </div>
+    
+        </div>
+        
+        <div class="article container" >
+            <h2 class="text-center well">Temperature Converter</h2>
+            <div style="text-align: center;margin-bottom: 10px;">
+                <img src="Toolkib Thumbnail/Temperature Converter.png" class="img-thumbnail" alt="Temperature Converter"
+                    title="Temperature Converter">
+            </div>
+            <p style="font-size: large;">Do you need to convert temperature from Celsius to Fahrenheit or Fahrenheit to Celsius? Do you need to convert temperature from Kelvin to Celsius or Fahrenheit? Then, ToolKib Temperature Converter can be your best assistance. To convert temperature, you do not need to know the rules or relations between Celsius, Fahrenheit and Kelvin. You can just put a value in one and get the result in another.</p>
+            <p style="font-size: large;">Though, you do not need to the relations between these 3 units to change with Free Online Temperature Converter like ToolKib’s Converter, we still encourage you to know the relation for your own good. </p>
+            <p style="font-size: large;">The Relation between Celsius, Fahrenheit and Kelvin are: <b>Celsius/5 = (Fahrenheit – 32)/9 = (Kelvin – 273)/5 </b></p>
+            <p style="font-size: large;">Starting point of Celsius is 0 degree Celsius and the ending point is 100 degree. Whereas these two values for Fahrenheit and Kelvin are 32, 180 and 273.15, 373.15. </p>  
+            <br/> 
+            <h3>Why should I use ToolKib’s Free Online Temperature Converter?</h3>
+            <p style="font-size: large;">You should use it because it is free, it’s easier to use and its layout to understand by any of the users. You can convert temperature from one unit to another very easily. Just put the value and click on Convert.</p>
+            <table class="table table-bordered">
+                <tr>
+                    <th>Celsius</th>
+                    <th>
+                        Fahrenheit
+                    </th>
+                    <th>Kelvin</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>32</td>
+                    <td>273</td>
+                </tr>
+                <tr>
+                    <td>-18</td>
+                    <td>0</td>
+                    <td>255</td>
+                </tr>
+                <tr>
+                    <td>-100</td>
+                    <td>-148</td>
+                    <td>173</td>
+                </tr>
+                <tr>
+                    <td>-273.15</td>
+                    <td>0</td>
+                    <td>-460</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>68</td>
+                    <td>293</td>
+                </tr>
+                <tr>
+                    <td>100</td>
+                    <td>212</td>
+                    <td>373</td>
+                </tr>
+                <tr>
+                    <td>150</td>
+                    <td>302</td>
+                    <td>473</td>
+                </tr>
+
+
+             
+            </table>
+        </div>
+        </main>
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        <h3><a href="about.html">Toolkib</a></h3>
+                        <p>A Part Of Pathgriho Network</p>
+                        <p>&copy;<a href="https://pathgriho.com"> Pathgriho: Since 2020</a></p>
+                        <p>Find all type of helful online tools. Free to use. Easy to understand layout.</p>
+                        <p></p>
+                    </div>
+                    <div class="col-sm-3">
+                        <h3>More Tools</h3>
+                        <ul>
+                            <li><a href="circles-area-counter.html" class="linktext">Circle Area Calculator</a></li>
+                            <li><a href="measure-monitor-size.html" class="linktext">Measure Monitor Size</a></li>
+                            <li><a href="online-disclaimer-generator.html" class="linktext">Disclaimer Generator</a>
+                            </li>
+                            <li><a href="password-generator.html" class="linktext">Password Generator</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h3>Our Policies</h3>
+                        <ul>
+                            <li><a href="contact-us.html" class="linktext">Contact Us</a></li>
+                            <li><a href="disclaimer.html" class="linktext">Disclaimer</a></li>
+                            <li><a href="privacy-policy.html" class="linktext">Privacy Policy</a></li>
+                            <li><a href="terms-and-conditions.html" class="linktext">Terms and Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <h3>Follow us on</h3>
+                        <ul>
+                            <li><a href="https://www.facebook.com/pathgriho71" class="linktext">Facebook</a></li>
+                            <li><a href="https://www.pathgriho.com" class="linktext">Pathgriho Blog</a></li>
+                            <li><a href="https://tech.pathgriho.com" class="linktext">Techkib Blog</a></li>
+                            <li><a href="https://dm.pathgriho.com" class="linktext">Different Marketing</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container" style="text-align: center;">
+                <p><a href="https://www.facebook.com/pathgriho71" class="footericon"><img src="facebook.svg"
+                            class="socialicon"></a>
+                    <a href="https://www.linkedin.com/company/pathgriho-network" class="footericon"><img src="linkedin.svg"
+                            class="socialicon"></a>
+                    <a href="https://sigmakib2.github.io/pathgriho-network-dev/" class="footericon"><img src="github.svg" class="socialicon"></a></p>
+                <p>Developers: <a href="https://www.linkedin.com/in/sakib-mahmud-175575192" style="color: turquoise;">Sakib Mahmud</a> and <a href="https://www.linkedin.com/in/rabi0249"
+                        style="color: turquoise;">Mohammad Rabiul Mollah</a></p>
+            </div>
+        </footer>
+    <script src="temperature.js"></script>
+</body>
+
+</html>

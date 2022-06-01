@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Disclaimer Generator</title>
+    <meta name="description" content="Generate a Disclaimer for your website for free. No need for registration. Create a disclaimer under a minute.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="fev.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="bcdn.css">
+    <script src="jcdn.js"></script>
+    <script src="bcdn.js"></script>
+   
+    <style>
+     *   {
+    box-sizing: border-box;
+}
+.yes {
+    background-color:rgb(10, 240, 109);
+    margin: 0;
+    border:0;
+    border-radius: 12px;
+    padding: 9px;
+    font-weight: bold;
+}
+.yes:hover {
+    background-color:seagreen;
+    color:white;
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+
+footer {
+    background-color:#161E2C ;
+    color: white;
+}
+footer a {
+    color: white;
+}
+footer a:hover {
+    color:greenyellow;
+}
+.socialicon {
+    height: 40px;
+    width: auto;
+    
+}
+@media screen and (max-width:600px) {
+    .no {
+        width:90%;
+        height:50px;
+    }
+}
+    </style>  
+</head>
+
+
+<body>
+    <header>
+        <div class="jumbotron text-center" style="margin-bottom:0">
+            <h1>Generate Disclaimer</h1>
+            <p>Toolkib</p>
+            <p>Ready to Provide Your Desired Tools</p>
+        </div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand">Toolkib</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="toolkib-converters.html">Convertor</a></li>
+                        <li><a href="toolkib-online-generator.html">Online Generator</a></li>
+                        <li><a href="toolkib-mathmatical-tools.html">Mathematical Tools</a></li>
+                        <li><a href="toolkib-more-tools.html">More</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container  ">
+            <div class="row">
+                <div class=" well col-lg-9">
+                    <h1 class="text-center">Disclaimer Generator</h1>
+                    <select class="form-control">
+                        <option value="Website">Website</option>
+                        <option value="Personal Blog Site">Personal Blog Site</option>
+                    </select> <br/><br/> 
+                        <p class="text-center">Website Name: </p> 
+                        <p class="text-center"><input type = "text" id = "webName" class="no" required/> <br/> <br/></p>
+                        <p class="text-center">Website URL: </p><p class="text-center"><input type = "text" id = "webURL" class="no" required/> <br/> <br/></p>
+                        <p class="text-center">Email Address: </p><p class="text-center"><input type = "email" size=30 id = "webMail" class="no" required /> <br/> <br/></p>
+                        <label>Do your website use Cookies? </label>
+                        <select name="" class="form-control">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select> <br/><br/> 
+                        <label>Do your or will your website show Ads from Google AdSense?</label>
+                        <select name="" id="from" class="form-control">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select> <br/><br/> 
+                      <p class="text-center"><input class="yes" type = "button" value = "Get Disclaimer" onclick = "sayHi()"/></p>
+                    </form>
+                      <br/><br/>
+                      
+                    <div id="myInput">
+                        <h2><p id="output1"></p></h2>
+                
+                        <br/><br/>
+                          <p style="text-align: left;" id="output2"></p>
+                          <br/>
+                          <p style="text-align: left;" id="output3"></p>
+                          <br/>
+                          <h3><p style="text-align: left;" id="output4"></p></h3>
+                          <p style="text-align: left;" id="output5"></p>
+                          <p style="text-align: left;" id="output6"></p>
+                          <p style="text-align: left;" id="output7"></p>
+                          <h3><p style="text-align: left;" id="output8"></p></h3>
+                          <p style="text-align: left;" id="output9"></p>
+                          <h3><p style="text-align: left;" id="output10"></p></h3><p style="text-align: left;" id="output10"></p>
+                          <p style="text-align: left;" id="output11"></p>
+                          <h3><p style="text-align: left;" id="output12"></p></h3>
+                          <p style="text-align: left;" id="output13"></p>
+                          <p style="text-align: left;" id="output14"></p>
+                          <p style="text-align: left;" id="output15"></p>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-3">
+          <!-- place ads here -->
+                </div>
+
+            </div>
+            <div class="article" style="font-family:'Times New Roman', Times, serif ;">
+                <div style="text-align: center;margin-bottom: 10px;">
+                    <img src="Toolkib Thumbnail/Disclaimer Generator.png" class="img-thumbnail" alt="Disclaimer Generator"
+                        title="Disclaimer Generator">
+                </div>
+                <h2 class="well text-center">Online Disclaimer Generator for Websites and Blogs</h2>
+                <p style="font-size: large;">Not every people having a website or blogsite is an expert in everything. Not every people know what should be the privacy policies, terms and conditions or disclaimer for his site. To help them to continue working, to boost their work’s pace, ToolKib has brought “Online Disclaimer Generator” that may help them in this way.  </p>
+                <p style="font-size: large;">ToolKib Disclaimer Generator has many advantages. First of all, it is free to use. And secondly it is easy to understand everything of this site. ToolKib Disclaimer Generator has disclaimer about Advertisements and using cookies as well. It will provide you a clear-cut disclaimer about the site you give backlinks to provide the users the best. It says about the submission too. It discourages users to submit their any passwords on this site without need which will help you to gain user’s trustworthiness. Accuracy of information related terms and condition is a must, and our tool provide that as well.</p>
+                <h3>How to Use Free Online Disclaimer Generator?</h3>
+                <p style="font-size: large;">It is very easy here. If you are using our tool, you only need to follow 7 very easy steps.</p>
+                <ol>
+                    <li>Declaring your site as website or personal blog.</li>
+                    <li>Giving website's name</li>
+                    <li>Website URL</li>
+                    <li>Email Address where you will be available to answer your user’s queries.</li>
+                    <li>Choosing options for Using cookies or not.</li>
+                    <li>Selecting if you show ads from Google AdSense.</li>
+                    <li>Click on “Get Disclaimer”</li>
+                </ol>
+                <p style="font-size: large;">You're Done.</p>
+            </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        <h3><a href="about.html">Toolkib</a></h3>
+                        <p>A Part Of Pathgriho Network</p>
+                        <p>&copy;<a href="https://pathgriho.com"> Pathgriho: Since 2020</a></p>
+                        <p>Find all type of helful online tools. Free to use. Easy to understand layout.</p>
+                        <p></p>
+                    </div>
+                    <div class="col-sm-3">
+                        <h3>More Tools</h3>
+                        <ul>
+                            <li><a href="weight-converter.html" class="linktext">Weight Converter</a></li>
+                            <li><a href="international-dialing-codes.html" class="linktext">Country and ISO Code</a></li>
+                            <li><a href="binary-decimal-hexadecimal-converter.html" class="linktext">Number Converter</a>
+                            </li>
+                            <li><a href="word-counter.html" class="linktext">Word Counter</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h3>Our Policies</h3>
+                        <ul>
+                            <li><a href="contact-us.html" class="linktext">Contact Us</a></li>
+                            <li><a href="disclaimer.html" class="linktext">Disclaimer</a></li>
+                            <li><a href="privacy-policy.html" class="linktext">Privacy Policy</a></li>
+                            <li><a href="terms-and-conditions.html" class="linktext">Terms and Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <h3>Follow us on</h3>
+                        <ul>
+                            <li><a href="https://www.facebook.com/pathgriho71" class="linktext">Facebook</a></li>
+                            <li><a href="https://www.pathgriho.com" class="linktext">Pathgriho Blog</a></li>
+                            <li><a href="https://tech.pathgriho.com" class="linktext">Techkib Blog</a></li>
+                            <li><a href="https://dm.pathgriho.com" class="linktext">Different Marketing</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container" style="text-align: center;">
+                <p><a href="https://www.facebook.com/pathgriho71" class="footericon"><img src="facebook.svg"
+                            class="socialicon"></a>
+                    <a href="https://www.linkedin.com/company/pathgriho-network" class="footericon"><img src="linkedin.svg"
+                            class="socialicon"></a>
+                    <a href="https://sigmakib2.github.io/pathgriho-network-dev/" class="footericon"><img src="github.svg" class="socialicon"></a></p>
+                <p>Developers: <a href="https://www.linkedin.com/in/sakib-mahmud-175575192" style="color: turquoise;">Sakib Mahmud</a> and <a href="https://www.linkedin.com/in/rabi0249/"
+                        style="color: turquoise;">Mohammad Rabiul Mollah</a></p>
+            </div>
+        </footer>
+
+    <script src="disclaimer.js"></script>
+</body>
+
+</html>

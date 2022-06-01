@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>About Toolkib</title>
+    <meta name="description" content="Know about toolkib developer team and pathgriho network.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="fev.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="bcdn.css">
+    <script src="jcdn.js"></script>
+    <script src="bcdn.js"></script>
+</head>
+<style>
+    body {
+        font: 400 15px Lato, sans-serif;
+        line-height: 1.8;
+        color: #818181;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #303030;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    h4 {
+        font-size: 19px;
+        line-height: 1.375em;
+        color: #303030;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+
+    .jumbotron {
+        background-color: #161E2C;
+        color: #fff;
+        padding: 100px 25px;
+        font-family: Montserrat, sans-serif;
+    }
+
+    .container-fluid {
+        padding: 60px 50px;
+    }
+
+    .bg-grey {
+        background-color: #f6f6f6;
+    }
+
+    .logo-small {
+        color: #161E2C;
+        font-size: 50px;
+    }
+
+    .logo {
+        color: #161E2C;
+        font-size: 200px;
+    }
+
+    .thumbnail {
+        padding: 0 0 15px 0;
+        border: none;
+        border-radius: 0;
+    }
+
+    .thumbnail img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 10px;
+    }
+
+    .carousel-control.right,
+    .carousel-control.left {
+        background-image: none;
+        color: #161E2C;
+    }
+
+    .carousel-indicators li {
+        border-color: #161E2C;
+    }
+
+    .carousel-indicators li.active {
+        background-color: #161E2C;
+    }
+
+    .item h4 {
+        font-size: 19px;
+        line-height: 1.375em;
+        font-weight: 400;
+        font-style: italic;
+        margin: 70px 0;
+    }
+
+    .item span {
+        font-style: normal;
+    }
+
+    .panel {
+        border: 1px solid #161E2C;
+        border-radius: 0 !important;
+        transition: box-shadow 0.5s;
+    }
+
+    .panel:hover {
+        box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+    }
+
+    .panel-footer .btn:hover {
+        border: 1px solid#161E2C;
+        background-color: #fff !important;
+        color: #161E2C;
+    }
+
+    .panel-heading {
+        color: #fff !important;
+        background-color: #161E2C !important;
+        padding: 25px;
+        border-bottom: 1px solid transparent;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .panel-footer {
+        background-color: white !important;
+    }
+
+    .panel-footer h3 {
+        font-size: 32px;
+    }
+
+    .panel-footer h4 {
+        color: #aaa;
+        font-size: 14px;
+    }
+
+    .panel-footer .btn {
+        margin: 15px 0;
+        background-color: #161E2C;
+        color: #fff;
+    }
+
+    .navbar {
+        margin-bottom: 0;
+        background-color: #161E2C;
+        z-index: 9999;
+        border: 0;
+        font-size: 12px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+        font-family: Montserrat, sans-serif;
+    }
+
+    .navbar li a,
+    .navbar .navbar-brand {
+        color: #fff !important;
+    }
+
+    .navbar-nav li a:hover,
+    .navbar-nav li.active a {
+        color: #161E2C !important;
+        background-color: #fff !important;
+    }
+
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+        color: #fff !important;
+    }
+
+    footer .glyphicon {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #161E2C;
+    }
+
+    .slideanim {
+        visibility: hidden;
+    }
+
+    .slide {
+        animation-name: slide;
+        -webkit-animation-name: slide;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        visibility: visible;
+    }
+
+    @keyframes slide {
+        0% {
+            opacity: 0;
+            transform: translateY(70%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+
+    @-webkit-keyframes slide {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(70%);
+        }
+
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0%);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .col-sm-4 {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .btn-lg {
+            width: 100%;
+            margin-bottom: 35px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .logo {
+            font-size: 150px;
+        }
+    }
+
+    .linktext {
+        color: white;
+        font-size: medium;
+        text-decoration: none
+    }
+
+    footer {
+        background-color: #161E2C;
+        color: white;
+    }
+
+    footer a {
+        color: white;
+    }
+
+    footer a:hover {
+        color: greenyellow;
+    }
+
+    .socialicon {
+        height: 40px;
+        width: auto;
+
+    }
+</style>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Toolkib</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="toolkib-converters.html">Convertor</a></li>
+                        <li><a href="toolkib-online-generator.html">Online Generator</a></li>
+                        <li><a href="toolkib-mathmatical-tools.html">Mathematical Tools</a></li>
+                        <li><a href="toolkib-more-tools.html">More</a></li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center">
+        <h1>Toolkib</h1>
+        <p>A Project of Pathgriho Network</p>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div id="about" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8 slideanim">
+                <h2>About Toolkib</h2><br>
+                <h4>Toolkib is a website based on online tools. You can use them for free. You don't need to install any
+                    software. You can use all of them inside your browser. From age calculation to finding international
+                    calling code we have every important tool you need.</h4>
+                <p>Toolkib has age calculator, word and character counter, password generator, Binary Octal Decimal
+                    Hexadecimal Converter, Weight Converter, Length Converter, International Dialing Codes, Mesure
+                    Monitor Size, Circle's Area Calculator, Batsman's Average Counter, Body Mass Index Calculator,
+                    Disclaimer Generator, Feet and Inch to Meter and Centimeter, Batsman's Strike Rate Counter,
+                    Temperature Converter and so many other tools.</p>
+
+            </div>
+            <div class="col-sm-4 slideanim">
+                <img src="toolkiblogo 200.png" alt="" class="thumbnail" style="width: 90%; height: auto;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Container (Services Section) -->
+    <div id="services" class="container-fluid text-center slideanim">
+        <h1>About Pathgriho Network</h1>
+        <p>Pathgriho Network is an educational organization. Pathgriho Network was created on 15th January 2020. It was
+            created with only one purpose and it is to help our audience to know details and easily about so many
+            educative things.
+            Pathgriho blogs have been publishing educative articles. It publishes articles on Computer Science,
+            Programming, Graphics Designing for our that audience who are interested in Computer Science or information
+            and Communication Technology.
+        </p>
+    </div>
+
+    <!-- Container (Portfolio Section) -->
+    <div id="portfolio" class="container text-center">
+        <h2>Developer Team Of Toolkib</h2><br>
+        <h4></h4>
+        <div class="row text-center">
+            <div class="col-sm-6 slideanim">
+                <div class="thumbnail">
+                    <img src="https://sigmakib2.github.io/pathgriho-network-dev/hello%20sakib.png" alt="Sakib Mahmud"
+                        style="width: 300px;">
+                    <p><strong>Sakib Mahmud</strong></p>
+                    <p>Pathgriho Network</p>
+                </div>
+            </div>
+            <div class="col-sm-6 slideanim">
+                <div class="thumbnail">
+                    <img src="https://sigmakib2.github.io/pathgriho-network-dev/rabiul.png" alt="Mohammad Rabiul Mollah"
+                        style="width: 300px;">
+                    <p><strong>Mohammad Rabiul Mollah</strong></p>
+                    <p>Pathgriho Network</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services" class="container-fluid text-center slideanim">
+        <h1>Pathgriho Network</h1>
+    </div>
+    <footer id="more">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4 text-center">
+                    <h3>Toolkib</h3>
+                    <p>A Part Of Pathgriho Network</p>
+                    <p>&copy;<a href="https://pathgriho.com"> Pathgriho 2020</a></p>
+                    <p>Find all type of helful online tools. Free to use. Easy to understand layout.</p>
+                    <p></p>
+                </div>
+                <div class="col-sm-3">
+                    <h3>More Tools</h3>
+                    <ul>
+                        <li><a href="weight-converter.html" class="linktext">Weight Converter</a></li>
+                        <li><a href="international-dialing-codes.html" class="linktext">Country and ISO Code</a></li>
+                        <li><a href="binary-decimal-hexadecimal-converter.html" class="linktext">Number Converter</a>
+                        </li>
+                        <li><a href="temperature-converter.html" class="linktext">Temperature Converter</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h3>Our Privacy Policies</h3>
+                    <ul>
+                        <li><a href="contact-us.html" class="linktext">Contact Us</a></li>
+                        <li><a href="disclaimer.html" class="linktext">Disclaimer</a></li>
+                        <li><a href="privacy-policy.html" class="linktext">Privacy Policies</a></li>
+                        <li><a href="terms-and-conditions.html" class="linktext">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h3>Follow us on</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/pathgriho71" class="linktext">Facebook</a></li>
+                        <li><a href="https://www.pathgriho.com" class="linktext">Pathgriho Blog</a></li>
+                        <li><a href="https://tech.pathgriho.com" class="linktext">Techkib Blog</a></li>
+                        <li><a href="https://dm.pathgriho.com" class="linktext">DM Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="text-align: center;">
+            <p><a href="https://www.facebook.com/pathgriho71" class="footericon"><img src="facebook.svg"
+                        class="socialicon"></a>
+                <a href="https://www.linkedin.com/company/pathgriho-network" class="footericon"><img src="linkedin.svg"
+                        class="socialicon"></a>
+                <a href="https://sigmakib2.github.io/pathgriho-network-dev/" class="footericon"><img src="github.svg"
+                        class="socialicon"></a></p>
+            <p>Developers: <a href="https://www.linkedin.com/in/sakib-mahmud-175575192" style="color: turquoise;">Sakib Mahmud</a> and <a href="https://www.linkedin.com/in/rabi0249/"
+                    style="color: turquoise;">Mohammad Rabiul Mollah</a></p>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+
+            $(window).scroll(function () {
+                $(".slideanim").each(function () {
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        })
+    </script>
+
+</body>
+
+</html>

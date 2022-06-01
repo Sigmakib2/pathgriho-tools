@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Feet Inch Converter</title>
+    <meta name="description" content="Convert Feet+inches (ft+in) to meters (m) and meters to centimeters.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="fev.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="bcdn.css">
+    <script src="jcdn.js"></script>
+    <script src="bcdn.js"></script>
+   
+    <style>
+     *   {
+    box-sizing: border-box;
+}
+.yes {
+    background-color:rgb(10, 240, 109);
+    margin: 0;
+    border:0;
+    border-radius: 12px;
+    padding: 9px;
+    font-weight: bold;
+}
+.yes:hover {
+    background-color:seagreen;
+    color:white;
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+
+footer {
+    background-color:#161E2C ;
+    color: white;
+}
+footer a {
+    color: white;
+}
+footer a:hover {
+    color:greenyellow;
+}
+.socialicon {
+    height: 40px;
+    width: auto;
+    
+}
+@media screen and (max-width:600px) {
+    .no {
+        width:90%;
+        height:50px;
+    }
+}
+    </style>  
+</head>
+
+
+<body>
+    <header>
+        <div class="jumbotron text-center" style="margin-bottom:0">
+            <h1>Feet Inch Converter</h1>
+            <p>Toolkib</p>
+            <p>Kingdom of Free Online Tools</p>
+        </div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand">Toolkib</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="toolkib-converters.html">Convertor</a></li>
+                        <li><a href="toolkib-online-generator.html">Online Generator</a></li>
+                        <li><a href="toolkib-mathmatical-tools.html">Mathematical Tools</a></li>
+                        <li><a href="toolkib-more-tools.html">More</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+    
+                <div class="col-sm-8">
+                    <div class="well text-center">
+                        <form name="hei">
+                            <h2>Feet and Inch to Meter</h2><br/>
+                            <p>
+                            
+                                <input type="text" name="feet" placeholder="Feet" size="20"><br /><br/>
+                            <input type="text" name="inch" placeholder="Inch" size="20"><br /><br/>
+                              <br/><input class="yes px-3 py-2" type="button" value="Find Heighht in Meters" onClick="calculateFI()"><br />
+                              <br/> <p><input type="text" name="hhh" placeholder="Your Height Will be here" size="20"><br /><br/></p>
+    
+                        </form>
+                        <form name="mcm">
+                            <input type="text" name="feet" placeholder="Meter" size="20"><br /><br/>
+                            <input class="yes px-3 py-2" type="button" value="Find Heighht in Centimeters" onClick="calculateFII()"><br />
+                            <br/> <p><input type="text" name="hhhh" placeholder="Your Height Will be here" size="20"><br /><br/></p>
+                        </form>
+                    </div>
+                </div>
+    
+                <div class="col-sm-4">
+                    <!-- place for ads, banner -->
+                    
+                </div>
+            </div>
+        </div>
+        <div class="article container">
+            <h2>Feet and Inch to Meters and Centimeters</h2>
+            <div style="text-align: center;margin-bottom: 10px;">
+                <img src="Toolkib Thumbnail/Age Calculator.png" class="img-thumbnail" alt="age calculator"
+                    title="age calculator">
+            </div>
+            <p>Sometimes, we need to convert our height to meters. But most of the time we measure our height in feet and inch. But for so many purposes we need to convert. For example, if we want to calculate Body Mass Index <a style="text-decoration: underline; color:brown" href="body-mass-index.html">(Calculate BMI with ToolKib)</a>( you need your height in meters. </p>
+            <p>We know, 1 meter = feet/3.2808</p>
+            <p>1 meter = inch/39.379</p>
+            <p>1 meter = 100 centimeter</p>
+            <p>For example, 5 feet and 5 inch is equivalent to 1.651 meters and 165.1 centimeter. </p>
+        </div>
+
+        </main>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <h3><a href="about.html">Toolkib</a></h3>
+                    <p>&copy;<a href="https://pathgriho.com"> Pathgriho 2020</a></p>
+                    <p>Find all types of helpful online tools. Free to use. Easy to understand.</p>
+                    <p></p>
+                </div>
+                <div class="col-md-3">
+                    <h3>More Tools</h3>
+                    <ul>
+                        <li><a href="measure-monitor-size.html" class="linktext">Measure Monitor Size</a></li>
+                        <li><a href="length-converter.html" class="linktext">Length Converter</a></li>
+                        <li><a href="binary-decimal-hexadecimal-converter.html" class="linktext">Number Converter</a></li>
+                        <li><a href="temperature-converter.html" class="linktext">Temperature Convertor</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h3>Our Policies</h3>
+                    <ul>
+                        <li><a href="contact-us.html" class="linktext">Contact Us</a></li>
+                        <li><a href="disclaimer.html" class="linktext">Disclaimer</a></li>
+                        <li><a href="privacy-policy.html" class="linktext">Privacy Policies</a></li>
+                        <li><a href="terms-and-conditions.html" class="linktext">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Follow us on</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/pathgriho71" class="linktext">Facebook</a></li>
+                        <li><a href="https://www.pathgriho.com" class="linktext">Pathgriho The Reading Room</a></li>
+                        <li><a href="https://tech.pathgriho.com" class="linktext">TechKib</a></li>
+                        <li><a href="https://dm.pathgriho.com" class="linktext">Different Marketing</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="text-align: center;">
+            <p><a href="https://www.facebook.com/pathgriho71" class="footericon"><img src="facebook.svg"
+                        class="socialicon"></a>
+                <a href="https://www.linkedin.com/company/pathgriho-network" class="footericon"><img src="linkedin.svg"
+                        class="socialicon"></a>
+                <a href="https://sigmakib2.github.io/pathgriho-network-dev/" class="footericon"><img src="github.svg" class="socialicon"></a></p>
+            <p>Developers: <a href="https://www.linkedin.com/in/sakib-mahmud-175575192" style="color: turquoise;">Sakib Mahmud</a> and <a href="https://www.linkedin.com/in/rabi0249/"
+                    style="color: turquoise;">Mohammad Rabiul Mollah</a></p>
+        </div>
+    </footer>
+    
+    <script src="feet-inch.js"></script>
+</body>
+
+</html>

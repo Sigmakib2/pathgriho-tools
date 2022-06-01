@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Weight Converter</title>
+    <meta name="description" content="Convert a unit of weight to another unit such as Pounds, Metric Tons, Kilograms, Grams, Milligrams, Micrograms, Ounces, Stones.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="fev.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="bcdn.css">
+    <script src="jcdn.js"></script>
+    <script src="bcdn.js"></script>
+    <script src="weight-converter.js"></script>
+</head>
+<style>
+    .input {
+        width: 55%;
+        height: 34px;
+        outline: none;
+    }
+
+    .convert-button {
+        width: 40%;
+        height: 34px;
+        background-color: rgb(12, 245, 136);
+        border-radius: 3px;
+        outline: none;
+    }
+
+    .linktext {
+        color: white;
+        font-size: medium;
+        text-decoration: none
+    }
+
+    footer {
+        background-color: #161E2C;
+        color: white;
+    }
+
+    footer a {
+        color: white;
+    }
+
+    footer a:hover {
+        color: greenyellow;
+    }
+
+    .socialicon {
+        height: 40px;
+        width: auto;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="jumbotron text-center" style="margin-bottom:0">
+            <h1>Weight Converter</h1>
+            <p>A Free Web based Tool For Weight Conversion</p>
+        </div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand">Toolkib</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="toolkib-converters.html">Convertor</a></li>
+                        <li><a href="toolkib-online-generator.html">Online Generator</a></li>
+                        <li><a href="toolkib-mathmatical-tools.html">Mathematical Tools</a></li>
+                        <li><a href="toolkib-more-tools.html">More</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container text-center" style="margin-bottom: 10px;">
+          <!-- responsive ad code here -->
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div>
+                        <div class="well">
+                            <p><b>Enter the weight you want to convert in the input field. Press the Convert button to
+                                    get the value.</b></p>
+                        </div>
+                        <form name="calcform" autocomplete="off">
+                            <h4>Metric Tons:</h4>
+                            <p>
+                                <input type="number" min="0" step="any" id="ton" name="ton" autofocus class="input">
+                                <input onclick="ConvertTon()" type="button" value="Convert (t)" class="convert-button">
+                            </p>
+                            <h4>Kilograms:</h4>
+                            <p>
+                                <input type="number" min="0" step="any" id="kg" name="kg" class="input">
+                                <input onclick="ConvertKg()" type="button" value="Convert (Kg)" class="convert-button">
+                            </p>
+                            <h4>Grams:</h4>
+                            <p>
+                                <input type="number" min="0" step="any" id="gr" name="gr" class="input">
+                                <input onclick="ConvertGr()" type="button" value="Convert (g)" class="convert-button">
+                            </p>
+                            <h4>Milligrams:</h4>
+                            <p>
+                                <input type="number" min="0" step="any" id="mg" name="mg" class="input">
+                                <input onclick="ConvertMg()" type="button" value="Convert (mg)" class="convert-button">
+                            </p>
+                            <h4>Micrograms:</h4>
+                            <p>
+                                <input type="number" min="0" step="any" id="mcg" name="mcg" class="input">
+                                <input onclick="ConvertMcg()" type="button" value="Convert (mcg)"
+                                    class="convert-button">
+                            </p>
+                            <h4>Stones:</h4>
+                            <p>
+                                <input type="number" min="0" step="any" id="st" name="st" class="input">
+                                <input onclick="ConvertSt()" type="button" value="Convert (st)" class="convert-button">
+                            </p>
+                            <h4>Pounds:</h4>
+                            <p>
+                                <input type="number" min="0" step="any" id="lb" name="lb" class="input">
+                                <input onclick="ConvertLb()" type="button" value="Convert (lb)" class="convert-button">
+                            </p>
+                            <h4>Ounces:</h4>
+                            <p>
+                                <input type="number" min="0" step="any" id="oz" name="oz" class="input">
+                                <input onclick="ConvertOz()" type="button" value="Convert (oz)" class="convert-button">
+                            </p>
+                            <p><input type="reset" value="Reset" class="btn btn-warning"></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <!-- place for ads, banner -->
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="well"><b>All About Weight Conversion:</b></div>
+            <div style="text-align: center;margin-bottom: 10px;">
+                <img src="Toolkib Thumbnail/weight converter.png" class="img-thumbnail" alt="weight converter"
+                    title="weight converter">
+            </div>
+            <article>
+                <p>A body's relative mass or the quantity of matter contained by the body, giving rise to a
+                    downward force is called
+                    weight. We need to use weight in every spare of life. There is no need to talk about the
+                    usage of weight. But
+                    some may can ask, “what is the importance of conversion of weight in measurement?” But the
+                    answer is that reason
+                    you came here to convert for. Weight conversion is also important for keeping records.
+                    Mainly in different areas
+                    of world different units are being followed to measure something’s weight. Some follow the
+                    metric system where
+                    the others follow non-metric. Whatever here we are going to explain almost every way to
+                    convert weight.</p>
+                <div>
+                    <!-- place in-article ad code here -->
+                </div>
+
+                <h2>1.Converting Grams to Kilograms, Milligrams, Pounds and Ounces</h2>
+                <h3>1A. How to Convert Grams to Kilograms?</h3>
+                <p>1000 gram is equal to 1 Kilogram. Again 1 gram is equals to 0.001 Kilograms
+                    (kg).<br>Thus,<br>1 g=(1/1000)
+                    kg=0.001 kg<br>In one word, it can be calculating in the formation given below:<br><b>m
+                        (gram) / 1000=M
+                        (kg)</b><br><br>Example 1:<br>Covert 10 g to Kilogram.<br>10 (g) / 1000=0.01 kg
+                <h3>1B. How to Convert Grams to Milligrams?</h3>
+                <p>1000 mg is equals to 1 gram.<br>So,<br>1 g=1000 mg<br>In short it can be express in the
+                    formation given
+                    below:<br><b>M (g) × 1000=m (mg)</b><br><br>Example 2:<br>Covert 10 g to milligrams.<br>10
+                    (g) × 1000=10000 kg
+                </p>
+                <h3>1C. How to covert Grams to Pounds?</h3>
+                <p>We know that, 1 gram is equal to 0.00220462262185 pounds. Pounds is denoted by
+                    lbs.<br>Therefore,<br>1
+                    g=0.00220462262185 lb<br>In short,<br><b>m(lb)=M(g) / 453.59237</b><br><br>Example
+                    3:<br>Convert 10g to
+                    pounds:<br>m(lb)=10 g / 453.59237=0.02204622 lb</p>
+                <h3>1D. How to covert Grams to Ounces?</h3>
+                <p>It is known that, 1 gram (g) is equal to 0.03527396195 ounces. Ounces is denoted by
+                    oz.<br>Thus,<br>1
+                    g=0.03527396195 oz<br>In short<br><b>m(oz)=M(g) / 28.34952</b><br><br>Example4:<br>Convert
+                    15g to
+                    Ounces:<br>m(oz)=15 g / 28.34952=0.529109 oz </p>
+                <h3>1E. Conversion table for Grams to Kilograms, Milligrams, Pounds and Ounces:</h3>
+                <div style="overflow-x: auto">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td>grams</td>
+                                <td>kilograms</td>
+                                <td>Milligrams</td>
+                                <td>Ounces</td>
+                                <td>Pounds</td>
+                                <td>Pounds+ounce</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0 lb 0 oz</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0.001</td>
+                                <td>1000</td>
+                                <td>0.0353</td>
+                                <td>0.002205</td>
+                                <td>0 lb 0.0353 oz</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>0.002</td>
+                                <td>2000</td>
+                                <td>0.0706</td>
+                                <td>0.004409</td>
+                                <td>0 lb 0.0706 oz</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>0.005</td>
+                                <td>5000</td>
+                                <td>0.1764</td>
+                                <td>0.011023</td>
+                                <td>0 lb 0.1764 oz</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>0.01</td>
+                                <td>10000</td>
+                                <td>0.3527</td>
+                                <td>0.022046</td>
+                                <td>0 lb 0.3527 oz</td>
+                            </tr>
+                            <tr>
+                                <td>30</td>
+                                <td>0.03</td>
+                                <td>30000</td>
+                                <td>1.0582</td>
+                                <td>0.066139</td>
+                                <td>0 lb 1.0580 oz</td>
+                            </tr>
+                            <tr>
+                                <td>50</td>
+                                <td>0.05</td>
+                                <td>50000</td>
+                                <td>1.7637</td>
+                                <td>0.110231</td>
+                                <td>0 lb 1.7640 oz</td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>100</td>
+                                <td>0.1</td>
+                                <td>100000</td>
+                                <td>3.5274</td>
+                                <td>0.220462</td>
+                                <td>0 lb 3.5270 oz</td>
+                            </tr>
+                            <tr>
+                                <td> 1000 </td>
+                                <td> 1 </td>
+                                <td> 1000000 </td>
+                                <td> 35.2740 </td>
+                                <td> 2.204623 </td>
+                                <td> 2 lb 3.2740 oz </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2>2. Milligrams to Grams, Kilograms, Micrograms</h2>
+                <h3>2A. Milligrams to Grams:</h3>
+                <p>We know that, 1 milligram (mg) is equals to 1/1000 grams (g).<br>1 mg=(1/1000) g=0.001
+                    g<br>In short, we can
+                    say,<br><b>M(g)=m(mg) / 1000</b><br><br>Example 5:<br>Convert 50mg to grams:<br>M(g)=50 mg /
+                    1000=0.05 g</p>
+                <h3>2B. Milligrams to Kilograms:</h3>
+                <p>As, 1 milligram (mg) is equals to 0.000001kilograms (kg).<br>Thus,<br>1
+                    mg=10<sup>-6</sup>kg=0.000001 kg<br>So we
+                    can say that,<br><b>M(kg)=m(mg) / 10<sup>6</sup>=m(mg) / 1000000</b><br><br>Example
+                    6:<br>Convert 5 mg to
+                    kg:<br>We know,<br>M(kg)=m(mg) / 10<sup>6</sup>=m(mg) / 1000000<br>So,<br>M(kg)=5 mg /
+                    1000000=0.000005 kg</p>
+                <h3>2C. Milligrams to micrograms:</h3>
+                <p>It is known to us that 1 milligram (mg) is equal to 1000 micrograms (μg).<br>That means, 1
+                    mg=1000 μg<br>m in
+                    micrograms (μg) is equal to 1000 times the mass M in milligrams
+                    (mg)<br>So,<br><b>m(μg)=m(mg) ×
+                        1000</b><br><br>Example 7:<br>Convert 50 mg to micrograms:<br>m(μg)=50 mg × 1000=50000
+                    μg</p>
+                <div style="overflow-x: auto">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td> Milligrams </td>
+                                <td> Grams </td>
+                                <td> Kilograms </td>
+                                <td> Micrograms </td>
+                            </tr>
+                            <tr>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                            </tr>
+                            <tr>
+                                <td> 0.1 </td>
+                                <td> 0.001 </td>
+                                <td> 0.0000001 </td>
+                                <td> 100 </td>
+                            </tr>
+                            <tr>
+                                <td> 1 </td>
+                                <td> 0.001 </td>
+                                <td> 0.000001 </td>
+                                <td> 1000 </td>
+                            </tr>
+                            <tr>
+                                <td> 5 </td>
+                                <td> 0.005 </td>
+                                <td> 0.000005 </td>
+                                <td> 5000 </td>
+                            </tr>
+                            <tr>
+                                <td> 10 </td>
+                                <td> 0.01 </td>
+                                <td> 0.00001 </td>
+                                <td> 10000 </td>
+                            </tr>
+                            <tr>
+                                <td> 100 </td>
+                                <td> 0.1 </td>
+                                <td> 0.0001 </td>
+                                <td> 100000 </td>
+                            </tr>
+                            <tr>
+                                <td> 1000 </td>
+                                <td> 1 </td>
+                                <td> 0.001 </td>
+                                <td> 1000000 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2>3. Kilograms to Tons, Grams, Milligrams, Ounces, Pounds:</h2>
+                <h3>3A. Kilograms to Tons:</h3>
+                <p>1000000 tons makes 1 kilogram.<br>So, 1 kg=(1/1000) tons=0.001 tons<br>The weight X in tons
+                    is equal to the
+                    weight x in kg divided by 1000.<br><b>X (t)=x (kg) / 1000</b><br><br>Example 8:<br>Convert 8
+                    kg to
+                    tons:<br>X(t)=8 kg / 1000=0.008 t</p>
+                <h3>3B. Kilograms to grams:</h3>
+                <p>1 kilogram (kg) is equal to 1000 grams (g).<br>1 kg=1000 g<br>We can write,<br><b>p(g)=q(kg)
+                        ×
+                        1000</b><br><br>Example 9:<br>Convert 49 kg to grams:<br>p(g)=49 kg × 1000=49000 g</p>
+                <h3>3C. Kilograms to milligrams:</h3>
+                <p>1000000 milligrams (mg) make 1 gram (kg).<br>1 kg=106 mg=1000000 mg<br>The mass m in
+                    milligrams (mg) is equal to
+                    the mass m in kilograms (kg) times 1000000:<br><b>a(mg)=b(kg) × 1000000</b><br><br>Example
+                    10:<br>Convert 10 kg
+                    to mg:<br>a(mg)=10 kg × 1000000=10000000 mg</p>
+                <h3>3D. Kilograms to ounces:</h3>
+                <p>1 kg and 35.27396195 ounces are almost same.<br>Therefore,<br>1 kg=35.27396195 oz<br>The
+                    weight P in ounces (oz)
+                    is equal to the multiply weight Q in kilograms (kg) and 0.02834952.<br><b>P (oz)=Q (kg) /
+                        0.02834952</b><br><br>Example 11:<br>Can you convert 5 kg to ounces?<br>P (oz)=5 kg /
+                    0.02834952=176.37 oz
+                </p>
+                <h3>3E. kilograms to pounds:</h3>
+                <p>1 kilogram (kg) is approximately equals to 2.20462262185 pounds (lbs).<br>So, 1
+                    kg=2.20462262185 lb<br>In
+                    short,<br><b>P (lb)=Q(kg) / 0.45359237</b><br><br>Example 12:<br>Make a conversion of 5 kg
+                    to pounds:<br>P
+                    (lb)=5 kg / 0.45359237=11.023 lb</p>
+                <h3>3F. conversion table for Kilograms to Tons, Grams, Milligrams, Ounces, Pounds:</h3>
+                <div style="overflow-x: auto">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td> kg </td>
+                                <td> Ton </td>
+                                <td> g </td>
+                                <td> mg </td>
+                                <td> oz </td>
+                                <td> lbs </td>
+                            </tr>
+                            <tr>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                            </tr>
+                            <tr>
+                                <td> 0.1 </td>
+                                <td> 0.001 </td>
+                                <td> 100 </td>
+                                <td> 100000 </td>
+                                <td> 3.5273 </td>
+                                <td> 0.220 </td>
+                            </tr>
+                            <tr>
+                                <td> 1 </td>
+                                <td> 0.001 </td>
+                                <td> 1000 </td>
+                                <td> 1000000 </td>
+                                <td> 35.27 </td>
+                                <td> 2.205 </td>
+                            </tr>
+                            <tr>
+                                <td> 2 </td>
+                                <td> 0.002 </td>
+                                <td> 2000 </td>
+                                <td> 2000000 </td>
+                                <td> 70.55 </td>
+                                <td> 4.409 </td>
+                            </tr>
+                            <tr>
+                                <td> 5 </td>
+                                <td> 0.005 </td>
+                                <td> 5000 </td>
+                                <td> 5000000 </td>
+                                <td> 176.37 </td>
+                                <td> 11.023 </td>
+                            </tr>
+                            <tr>
+                                <td> 10 </td>
+                                <td> 0.01 </td>
+                                <td> 10000 </td>
+                                <td> 10000000 </td>
+                                <td> 352.74 </td>
+                                <td> 22.046 </td>
+                            </tr>
+                            <tr>
+                                <td> 50 </td>
+                                <td> 0.05 </td>
+                                <td> 50000 </td>
+                                <td> 500000000 </td>
+                                <td> 1763.70 </td>
+                                <td> 110.231 </td>
+                            </tr>
+                            <tr>
+                                <td> 100 </td>
+                                <td> 0.1 </td>
+                                <td> 100000 </td>
+                                <td> 1000000000 </td>
+                                <td> 2527.40 </td>
+                                <td> 220.462 </td>
+                            </tr>
+                            <tr>
+                                <td> 1000 </td>
+                                <td> 1 </td>
+                                <td> 1000000 </td>
+                                <td> 10000000000 </td>
+                                <td> 35273.96 </td>
+                                <td> 2204.623 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2>4. Micrograms to milligrams:</h2>
+                <h3>4A. How to Convert micrograms to milligrams?</h3>
+                <p>1 microgram (μg) is equals to 1/1000 milligram (mg).<br>1 μg=(1/1000) mg=0.001
+                    mg<br>So,<br><b>P (mg)=Q(μg) /
+                        1000</b><br><br>Example 13:<br>Convert 9 μg to milligrams for keeping
+                    records:<br>P(mg)=9 μg / 1000=0.009 mg
+                </p>
+                <h2>4B. Comversion Table for micrograms to milligrams:</h2>
+                <div style="overflow-x: auto">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td> Micrograms </td>
+                                <td> Milligrams </td>
+                            </tr>
+                            <tr>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                            </tr>
+                            <tr>
+                                <td> 0.1 </td>
+                                <td> 0.0001 </td>
+                            </tr>
+                            <tr>
+                                <td> 1 </td>
+                                <td> 0.001 </td>
+                            </tr>
+                            <tr>
+                                <td> 2 </td>
+                                <td> 0.002 </td>
+                            </tr>
+                            <tr>
+                                <td> 5 </td>
+                                <td> 0.005 </td>
+                            </tr>
+                            <tr>
+                                <td> 10 </td>
+                                <td> 0.01 </td>
+                            </tr>
+                            <tr>
+                                <td> 50 </td>
+                                <td> 0.05 </td>
+                            </tr>
+                            <tr>
+                                <td> 100 </td>
+                                <td> 0.1 </td>
+                            </tr>
+                            <tr>
+                                <td> 1000 </td>
+                                <td> 1 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2>5. Tons to Kilograms and Pounds</h2>
+                <h3>5A. Tons to kilograms:</h3>
+                <p>1 ton is same as 1000 kilograms (kg).<br>1 ton=1000 kg<br>So,<br><b>P(kg)=Q(ton) ×
+                        1000</b><br><br>Example
+                    14:<br>Convert 100 tonx to kilograms:<br>P(kg)=100 ton × 1000=100000 kg</p>
+                <h3>5B. Tons to Pounds:</h3>
+                <p>1 ton is equivalent to 2204.62262185 pounds (lbs).<br>1 ton=2204.62262185 lb<br>The equation
+                    stands,<br><b>P
+                        (lb)=Q (ton) / 0.00045359237</b><br><br>Example 15:<br>Convert 5 tons to pounds:<br>P
+                    (lb)=5 ton /
+                    0.00045359237=11023 lb</p>
+                <div style="overflow-x: auto">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td> Tons </td>
+                                <td> kg </td>
+                                <td> lbs </td>
+                            </tr>
+                            <tr>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                            </tr>
+                            <tr>
+                                <td> 0.1 </td>
+                                <td> 100 </td>
+                                <td> 220 </td>
+                            </tr>
+                            <tr>
+                                <td> 1 </td>
+                                <td> 1000 </td>
+                                <td> 2205 </td>
+                            </tr>
+                            <tr>
+                                <td> 5 </td>
+                                <td> 5000 </td>
+                                <td> 11023 </td>
+                            </tr>
+                            <tr>
+                                <td> 10 </td>
+                                <td> 10000 </td>
+                                <td> 22046 </td>
+                            </tr>
+                            <tr>
+                                <td> 50 </td>
+                                <td> 50000 </td>
+                                <td> 110231 </td>
+                            </tr>
+                            <tr>
+                                <td> 100 </td>
+                                <td> 100000 </td>
+                                <td> 220462 </td>
+                            </tr>
+                            <tr>
+                                <td> 1000 </td>
+                                <td> 1000000 </td>
+                                <td> 2204623 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2>6. Pounds to Grams, Kilograms, Ounces, Stones and Tons</h2>
+                <h3>6A. Pounds to Grams:</h3>
+                <p>We Know, 1 pound (lb) is equal to 453.59237 grams (g).<br>1 lb=453.59237 g<br><b>g=lb ×
+                        453.59237</b><br><br>Example 16:<br>Convert 5 pounds to gm/grams:<br>g=5 lb ×
+                    453.59237=2268 g</p>
+                <h3>6B. Pounds to Kilograms: How to Convert?</h3>
+                <p>1 pound (lb) is equals to 0.45359237 kilograms (kg).<br>1 lb=0.45359237 kg<br><b>m (kg)=M
+                        (lb) ×
+                        0.45359237</b><br><br>Example 17:<br>If you can, then convert 5 lb to kg:<br>m(kg)=5 lb
+                    × 0.45359237=2.268
+                    kg</p>
+                <h3>6C. Pounds to Ounces: How to Convert?</h3>
+                <p>1 pound is equals to 16 Ounces (oz).<br>1 lb=16 oz<br>So,<br><b>w(oz)=W (lb) ×
+                        16</b><br><br>Example
+                    18:<br>Convert 500 lb to ounces:<br>w (oz)=500 lb × 16=8000 oz</p>
+                <h3>6D. Pounds to Stones: How to Convert?</h3>
+                <p>1 pound (lb) is equal to 0.0714286 stones (st).<br>1 lb=0.0714286 st<br>The m in stones (st)
+                    is approximately
+                    equals to the M in pounds (lb) divided by 14.<br>So,<br><b>m(st)=M(lb) /
+                        14</b><br><br>Example 19:<br>Can you
+                    convert 5 lb to stones:<br>m(st)=5 lb / 14=0.357 st</p>
+                <h3>6E. Pounds to Tons: How to Convert?</h3>
+                <p>1 pound (lb) is equal to 0.45359237 tons.<br>1 lb=0.00045359237 ton<br>So,<br><b>m(t)=m(lb) ×
+                        0.00045359237</b><br><br>Example 20:<br>Convert 5 lb to tons:<br>m (tons)=5 lb ×
+                    0.00045359237=0.002268 tons
+                </p>
+                <h3>6F. Conversion Table for Pounds to Grams, Kilograms, Ounces, Stones and Tons:</h3>
+                <div style="overflow-x: auto">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td> Pounds </td>
+                                <td> Grams </td>
+                                <td> Kilograms </td>
+                                <td> Ounces </td>
+                                <td> Stones </td>
+                                <td> Tons </td>
+                            </tr>
+                            <tr>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                            </tr>
+                            <tr>
+                                <td> 0.1 </td>
+                                <td> 45 </td>
+                                <td> 0.045 </td>
+                                <td> 1.6 </td>
+                                <td> 0.00714 </td>
+                                <td> 0.0000454 </td>
+                            </tr>
+                            <tr>
+                                <td> 1 </td>
+                                <td> 454 </td>
+                                <td> 0.454 </td>
+                                <td> 16 </td>
+                                <td> 0.0714 </td>
+                                <td> 0.000454 </td>
+                            </tr>
+                            <tr>
+                                <td> 5 </td>
+                                <td> 2268 </td>
+                                <td> 2.268 </td>
+                                <td> 80 </td>
+                                <td> 0.3571 </td>
+                                <td> 0.002268 </td>
+                            </tr>
+                            <tr>
+                                <td> 10 </td>
+                                <td> 4535.9237 </td>
+                                <td> 4.536 </td>
+                                <td> 160 </td>
+                                <td> 0.7143 </td>
+                                <td> 0.004536 </td>
+                            </tr>
+                            <tr>
+                                <td> 100 </td>
+                                <td> 45359.237 </td>
+                                <td> 45.359 </td>
+                                <td> 1600 </td>
+                                <td> 7.1429 </td>
+                                <td> 0.045359 </td>
+                            </tr>
+                            <tr>
+                                <td> 1000 </td>
+                                <td> 453592.37 </td>
+                                <td> 453.592 </td>
+                                <td> 16000 </td>
+                                <td> 71.4286 </td>
+                                <td> 0.453592 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2>7. Stones to Pounds</h2>
+                <h3>7A. How to Convert Stones to Pounds:</h3>
+                <p>We know that,<br>1 stone (st) is equal to 14 pounds (lb).<br>1 st=14 lb<br>So in short it can
+                    be said
+                    that,<br><b>P (lb)=Q (st) × 14</b><br><br>Example 21:<br>Convert 10 st to pounds:<br>P
+                    (lb)=10 st × 14=140 lb
+                </p>
+                <h3>7B. Conversion Table for Stones to Pounds:</h3>
+                <div style="overflow-x: auto">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td> Stones </td>
+                                <td> Pounds </td>
+                            </tr>
+                            <tr>
+                                <td> 0.00 </td>
+                                <td> 0 </td>
+                            </tr>
+                            <tr>
+                                <td> 0.10 </td>
+                                <td> 1.4 </td>
+                            </tr>
+                            <tr>
+                                <td> 0.2 </td>
+                                <td> 2.8 </td>
+                            </tr>
+                            <tr>
+                                <td> 1 </td>
+                                <td> 14 </td>
+                            </tr>
+                            <tr>
+                                <td> 2 </td>
+                                <td> 28 </td>
+                            </tr>
+                            <tr>
+                                <td> 3 </td>
+                                <td> 42 </td>
+                            </tr>
+                            <tr>
+                                <td> 5 </td>
+                                <td> 70 </td>
+                            </tr>
+                            <tr>
+                                <td> 10 </td>
+                                <td> 140 </td>
+                            </tr>
+                            <tr>
+                                <td> 20 </td>
+                                <td> 280 </td>
+                            </tr>
+                            <tr>
+                                <td> 30 </td>
+                                <td> 420 </td>
+                            </tr>
+                            <tr>
+                                <td> 40 </td>
+                                <td> 560 </td>
+                            </tr>
+                            <tr>
+                                <td> 50 </td>
+                                <td> 700 </td>
+                            </tr>
+                            <tr>
+                                <td> 70 </td>
+                                <td> 980 </td>
+                            </tr>
+                            <tr>
+                                <td> 80 </td>
+                                <td> 1120 </td>
+                            </tr>
+                            <tr>
+                                <td> 90 </td>
+                                <td> 1260 </td>
+                            </tr>
+                            <tr>
+                                <td> 100 </td>
+                                <td> 1400 </td>
+                            </tr>
+                            <tr>
+                                <td> 1000 </td>
+                                <td> 14000 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2>8. Ounces to Grams, Kilograms and Pounds</h2>
+                <h3>8A. How to Convert Ounces to Grams?</h3>
+                <p>1 ounce (oz) is equal to 28.34952 grams (g).<br>1 oz=28.34952 g<br>So,<br><b>W(g)=M(oz) ×
+                        28.3495</b><br><br>Example 22:<br>Convert 5 ounces to grams if you can:<br>W(g)=5 oz ×
+                    28.34952=141.7476 g
+                </p>
+                <h3>8B. How to Convert Ounces to Kilograms?</h3>
+                <p>We know that 1 ounce (oz) is 0.02834952 kilograms (kg).<br>So,<br>1 oz=0.02834952
+                    kg<br>Hence, the line below can
+                    be written:<br><b>W (kg)=w (oz) × 0.02834952</b><br><br>Example 23:<br>Convert 5 oz to
+                    kilograms:<br>W (kg)=5 oz
+                    × 0.028.34952=0.1417476 kg</p>
+                <h3>8C. How to convert Ounces to Pounds?</h3>
+                <p>It is known that 1 ounce (oz) is equal to 0.0625 pounds (lb).<br>1 oz=(1/16) lb=0.0625
+                    lb<br>The weight denoted
+                    by w in pounds (lb) is equals to the 1th of 16th pof the weight W in ounces
+                    (oz).<br>So,<br><b>m(lb)=m(oz) /
+                        16</b><br><br>Example 24:<br>Convert 16 oz to pounds:<br>m(lb)=16 oz / 16=1 lb</p>
+                <h3>8D. Conversion Table for Ounces to Grams, Kilograms and Pounds:</h3>
+                <div style="overflow-x: auto">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td> Ounces </td>
+                                <td> Grams </td>
+                                <td> Kilograms </td>
+                                <td> Pounds </td>
+                            </tr>
+                            <tr>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                            </tr>
+                            <tr>
+                                <td> 0.1 </td>
+                                <td> 2.835 </td>
+                                <td> 0.002835 </td>
+                                <td> 0.00625 </td>
+                            </tr>
+                            <tr>
+                                <td> 1 </td>
+                                <td> 28.35 </td>
+                                <td> 0.02835 </td>
+                                <td> 0.0625 </td>
+                            </tr>
+                            <tr>
+                                <td> 2 </td>
+                                <td> 56.70 </td>
+                                <td> 0.05670 </td>
+                                <td> 0.125 </td>
+                            </tr>
+                            <tr>
+                                <td> 5 </td>
+                                <td> 141.75 </td>
+                                <td> 0.14175 </td>
+                                <td> 0.3125 </td>
+                            </tr>
+                            <tr>
+                                <td> 10 </td>
+                                <td> 283.50 </td>
+                                <td> 0.283495 </td>
+                                <td> 0.625 </td>
+                            </tr>
+                            <tr>
+                                <td> 100 </td>
+                                <td> 2834.95 </td>
+                                <td> 2.83495 </td>
+                                <td> 6.25 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2>9. Tons to Pounds and Kilograms.</h2>
+                <h3>9A. How to Convert Tons to Pounds?</h3>
+                <p>We know, 1 ton (t) is equal to 2204.62262185 pounds (lbs).<br>1 ton=2204.62262185 lb<br>In
+                    one word,<br><b>C
+                        (lb)=D tons / 0.00045359237</b><br><br>Example 25:<br>Convert 5t to pounds in practice
+                    purpose:<br>C (lb)=5
+                    t / 0.00045359237=11023 lb</p>
+                <h3>9B. How to Convert Tons to Kilograms?</h3>
+                <p>1 ton is equal to 1000 kilograms (kg).<br>1 ton=1000 kg<br>So in short,<br><b>P (kg)=Q (ton)
+                        ×
+                        1000</b><br><br>Example 26:<br>Convert 71 tons to kilograms:<br>P(kg)=71 t × 1000=71000
+                    kg</p>
+                <h3>9C. Conversion Table for Tons to Pounds and Kilograms:</h3>
+                <div style="overflow-x: auto">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td> Tons </td>
+                                <td> Pounds </td>
+                                <td> Kilograms </td>
+                            </tr>
+                            <tr>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                                <td> 0 </td>
+                            </tr>
+                            <tr>
+                                <td> 0.1 </td>
+                                <td> 220 </td>
+                                <td> 0.002835 </td>
+                            </tr>
+                            <tr>
+                                <td> 1 </td>
+                                <td> 2205 </td>
+                                <td> 0.02835 </td>
+                            </tr>
+                            <tr>
+                                <td> 2 </td>
+                                <td> 4409 </td>
+                                <td> 0.0567 </td>
+                            </tr>
+                            <tr>
+                                <td> 5 </td>
+                                <td> 11023 </td>
+                                <td> 0.14175 </td>
+                            </tr>
+                            <tr>
+                                <td> 10 </td>
+                                <td> 22046 </td>
+                                <td> 0.2835 </td>
+                            </tr>
+                            <tr>
+                                <td> 20 </td>
+                                <td> 44092 </td>
+                                <td> 0.56699 </td>
+                            </tr>
+                            <tr>
+                                <td> 50 </td>
+                                <td> 110231 </td>
+                                <td> 1.41748 </td>
+                            </tr>
+                            <tr>
+                                <td> 100 </td>
+                                <td> 220462 </td>
+                                <td> 2.83495 </td>
+                            </tr>
+                            <tr>
+                                <td> 1000 </td>
+                                <td> 2204623 </td>
+                                <td> 28.34952 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>10. Last Note:</h3>
+                <div class="well">
+                    <ul>
+                        <li>1 g=(1/1000) kg=0.001 kg</li>
+                        <li>1 g=1000 mg</li>
+                        <li>1 g=0.00220462262185 lb</li>
+                        <li>1 g=0.03527396195 oz</li>
+                        <li>1 mg=0.001 g</li>
+                        <li>1 mg=(1/1000000) kg=0.000001 kg</li>
+                        <li>1 mg=1000 &mu;g</li>
+                        <li>1 kg=(1/1000) tons=0.001 tons</li>
+                        <li>1 kg=1000 g</li>
+                        <li>1 kg=1000000 mg</li>
+                        <li>1 kg=35.27396195 oz</li>
+                        <li>1 kg=2.20462262185 lb</li>
+                        <li>1 &mu;g=(1/1000) mg</li>
+                        <li>1 ton=1000 kg</li>
+                        <li>1 ton=2204.62262185 lb</li>
+                        <li>1 lb=453.59237 g</li>
+                        <li>1 lb=0.45359237 kg</li>
+                        <li>1 lb=16 oz</li>
+                        <li>1 lb=0.0714286 st</li>
+                        <li>1 lb=0.00045359237 ton</li>
+                        <li>1 st=14 lb</li>
+                        <li>1 oz=28.34952 g</li>
+                        <li>1 oz=0.02834952 kg</li>
+                        <li>1 oz=0.0625 lb</li>
+                        <li>1 ton=2204.62262185 lb</li>
+                        <li>1 ton=1000 kg</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+        </div>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4 text-center">
+                    <h3><a href="about.html">Toolkib</a></h3>
+                    <p>A Part Of Pathgriho Network</p>
+                    <p>&copy;<a href="https://pathgriho.com"> Pathgriho 2020</a></p>
+                    <p>Find all type of helful online tools. Free to use. Easy to understand layout.</p>
+                    <p></p>
+                </div>
+                <div class="col-sm-3">
+                    <h3>More Tools</h3>
+                    <ul>
+                        <li><a href="length-converter.html" class="linktext">Length Converter</a></li>
+                        <li><a href="temperature-converter.html" class="linktext">Temperature Converter</a></li>
+                        <li><a href="binary-decimal-hexadecimal-converter.html" class="linktext">Number Converter</a>
+                        </li>
+                        <li><a href="age-calculator.html" class="linktext">Age Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h3>Our Policies</h3>
+                    <ul>
+                        <li><a href="contact-us.html" class="linktext">Contact Us</a></li>
+                        <li><a href="disclaimer.html" class="linktext">Disclaimer</a></li>
+                        <li><a href="privacy-policy.html" class="linktext">Privacy Policy</a></li>
+                        <li><a href="terms-and-conditions.html" class="linktext">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h3>Follow us on</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/pathgriho71" class="linktext">Facebook</a></li>
+                        <li><a href="https://www.pathgriho.com" class="linktext">Pathgriho Blog</a></li>
+                        <li><a href="https://tech.pathgriho.com" class="linktext">Techkib Blog</a></li>
+                        <li><a href="https://dm.pathgriho.com" class="linktext">Different Marketing</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="text-align: center;">
+            <p><a href="https://www.facebook.com/pathgriho71" class="footericon"><img src="facebook.svg"
+                        class="socialicon"></a>
+                <a href="https://www.linkedin.com/company/pathgriho-network" class="footericon"><img src="linkedin.svg"
+                        class="socialicon"></a>
+                <a href="https://sigmakib2.github.io/pathgriho-network-dev/" class="footericon"><img src="github.svg"
+                        class="socialicon"></a></p>
+            <p>Developers: <a href="https://www.linkedin.com/in/sakib-mahmud-175575192" style="color: turquoise;">Sakib Mahmud</a> and <a href="https://www.linkedin.com/in/rabi0249"
+                    style="color: turquoise;">Mohammad Rabiul Mollah</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Circle’s Area Finder</title>
+    <meta name="description" content="Calculate the area of circle using Radius, Diameter, Circumference. Find area of circle using easy to use interface.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="fev.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="bcdn.css">
+    <script src="jcdn.js"></script>
+    <script src="bcdn.js"></script>
+   
+    <style>
+     *   {
+    box-sizing: border-box;
+}
+.yes {
+    background-color:rgb(10, 240, 109);
+    margin: 0;
+    border:0;
+    border-radius: 12px;
+    padding: 9px;
+    font-weight: bold;
+}
+.yes:hover {
+    background-color:seagreen;
+    color:white;
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+
+footer {
+    background-color:#161E2C ;
+    color: white;
+}
+footer a {
+    color: white;
+}
+footer a:hover {
+    color:greenyellow;
+}
+.socialicon {
+    height: 40px;
+    width: auto;
+    
+}
+@media screen and (max-width:600px) {
+    .no {
+        width:90%;
+        height:50px;
+    }
+}
+    </style>  
+</head>
+
+
+<body>
+    <header>
+        <div class="jumbotron text-center" style="margin-bottom:0">
+            <h1>Circle’s Area Finder </h1>
+            <p>ToolKib</p>
+            <p>Ready to Provide Your Desired Tools</p>
+        </div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand">Toolkib</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="toolkib-converters.html">Convertor</a></li>
+                        <li><a href="toolkib-online-generator.html">Online Generator</a></li>
+                        <li><a href="toolkib-mathmatical-tools.html">Mathematical Tools</a></li>
+                        <li><a href="toolkib-more-tools.html">More</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-8">
+                <div class="well text-center">
+                    <form name="circle">
+                        <h2>Circle's Area</h2>
+                        <h3>Using Radius</h3>
+                        <br/>
+                        <input type="text" name="radius" placeholder="Radius of the Circle" size="20"><br /><br/>
+                        <input class="yes px-3 py-2" type="button" value="Calculate Area" onClick="calculateAC()"><br /><br/>
+                        <input type="text" name="acc" placeholder="Circle's area will be here" size="20"><br /><br/>
+                        <input class="yes px-3 py-2" type="reset" value="Try Another One" />
+                        <br/><br/>
+                        <p style="font-size: larger;">Area = πr<sup>2</sup>.</p>  
+                    </form>
+                    <form name="dia">
+                        <h3>Using Diameter</h3>
+                        <br/>
+                        <input type="text" name="diameter" placeholder="Diameter of the Circle" size="20"><br /><br/>
+                        <input class="yes px-3 py-2" type="button" value="Calculate Area" onClick="calculateACC()"><br /><br/>
+                        <input type="text" name="ac" placeholder="Circle's area will be here" size="20"><br /><br/>
+                        <input class="yes px-3 py-2" type="reset" value="Try Another One" />
+                        <br/><br/>
+                        <p style="font-size: larger;">Area = π(d/2)<sup>2</sup></p>
+                    </form>
+                    <form name="po">
+                        <h3>Using Circumference</h3>
+                        <br/>
+                        <input type="text" name="dj" placeholder="Circumference of the Circle" size="20"><br /><br/>
+                        <input class="yes px-3 py-2" type="button" value="Calculate Area" onClick="calculateCR()"><br /><br/>
+                        <input type="text" name="abc" placeholder="Circle's area will be here" size="20"><br /><br/>
+                        <input class="yes px-3 py-2" type="reset" value="Try Another One" /><br/><br/>
+                        <p style="font-size: larger;">Area = C<sup>2</sup>÷4π</p>
+                        <br/><br/>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <!-- place for ads, banner -->
+                
+            </div>
+
+        </div>
+
+    </div>
+    
+    <div class="article container">
+        <h2 class="text-center well">Circle’s Area Finder </h2>
+        <div style="text-align: center;margin-bottom: 10px;">
+            <img src="Toolkib Thumbnail/Circle's Area Calculator.png" class="img-thumbnail" alt="circle area calculator"
+                title="circle area calculator">
+        </div>
+        <p>Suppose, you have a circle’s radius or diameter. You need to find the area of the circle. What is the formula? The formula is</p>
+        <p><b>Area = πr<sup>2</sup>. Here, r = the radius of a circle. </b></p>
+        <p>If you haven’t got the radius, but you have the diameter. Still the formula is same. All you need is the radius. Radius is half of the diameter. So r = d/2. Here d = diameter.</p>
+        <p>So the formula is,</p>
+        <p><b>Area = π(d/2)<sup>2</sup>.</b></p>
+        <p>Again, if you have the circumference of a circle. The source formula is still the same. You need to find the radius and then apply to the formula of area= πr<sup>2</sup>.</p>
+        <p>We know, Circumference of a circle is 2πr. </p>
+        <p>Circumference = 2πr</p>
+        <p>Or, πr= Circumference / 2</p>
+        <p>Or, πr<sup>2</sup> = Circumference × r /2</p><br/>
+        <p>Again, it can be proved that,</p>
+        <p> <b>Area = C<sup>2</sup>÷4π</b></p>
+        <p>Using ToolKib’s Circle’s Area Finder Tools, you can find the area using only one value. That can be the radius, diameter or the circumference of the circle. </p>
+    </div>
+        </main>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <h3><a href="about.html">Toolkib</a></h3>
+                    <p>A Part Of Pathgriho Network</p>
+                    <p>&copy;<a href="https://pathgriho.com"> Pathgriho: Since 2020</a></p>
+                    <p>Find all types of helpful online tools. Free to use. Easy to understand.</p>
+                </div>
+                <div class="col-md-3">
+                    <h3>More Tools</h3>
+                    <ul>
+                        <li><a href="measure-monitor-size.html" class="linktext">Measure Monitor Size</a></li>
+                        <li><a href="international-dialing-codes.html" class="linktext">Country and ISO Code</a></li>
+                        <li><a href="password-generator.html" class="linktext">Password Generator</a></li>
+                        <li><a href="terms-and-conditions.html" class="linktext">Temperature Convertor</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h3>Our Policies</h3>
+                    <ul>
+                        <li><a href="contact-us.html" class="linktext">Contact Us</a></li>
+                        <li><a href="disclaimer.html" class="linktext">Disclaimer</a></li>
+                        <li><a href="privacy-policy.html" class="linktext">Privacy Policies</a></li>
+                        <li><a href="terms-and-conditions.html" class="linktext">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Follow us on</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/pathgriho71" class="linktext">Facebook</a></li>
+                        <li><a href="https://www.pathgriho.com" class="linktext">Pathgriho The Reading Room</a></li>
+                        <li><a href="https://tech.pathgriho.com" class="linktext">TechKib</a></li>
+                        <li><a href="https://dm.pathgriho.com" class="linktext">Different Marketing</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="text-align: center;">
+            <p><a href="https://www.facebook.com/pathgriho71" class="footericon"><img src="facebook.svg"
+                        class="socialicon"></a>
+                <a href="https://www.linkedin.com/company/pathgriho-network" class="footericon"><img src="linkedin.svg"
+                        class="socialicon"></a>
+                <a href="https://sigmakib2.github.io/pathgriho-network-dev/" class="footericon"><img src="github.svg" class="socialicon"></a></p>
+            <p>Developers: <a href="https://www.linkedin.com/in/sakib-mahmud-175575192" style="color: turquoise;">Sakib Mahmud</a> and <a href="https://www.linkedin.com/in/rabi0249/"
+                    style="color: turquoise;">Mohammad Rabiul Mollah</a></p>
+        </div>
+    </footer>
+
+    <script src="circles-area.js"></script>
+</body>
+
+</html>

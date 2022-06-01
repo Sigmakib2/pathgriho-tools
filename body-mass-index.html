@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Body Mass Index Calculator</title>
+    <meta name="description" content="Calculate Body Mass Index (BMI) using weight and height. This calculator provides BMI results with BMI status.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="fev.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="bcdn.css">
+    <script src="jcdn.js"></script>
+    <script src="bcdn.js"></script>
+   
+    <style>
+     *   {
+    box-sizing: border-box;
+}
+.yes {
+    background-color:rgb(10, 240, 109);
+    margin: 0;
+    border:0;
+    border-radius: 12px;
+    padding: 9px;
+    font-weight: bold;
+}
+.yes:hover {
+    background-color:seagreen;
+    color:white;
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+
+footer {
+    background-color:#161E2C ;
+    color: white;
+}
+footer a {
+    color: white;
+}
+footer a:hover {
+    color:greenyellow;
+}
+.socialicon {
+    height: 40px;
+    width: auto;
+    
+}
+@media screen and (max-width:600px) {
+    .no {
+        width:90%;
+        height:50px;
+    }
+}
+    </style>  
+</head>
+
+
+<body>
+    <header>
+        <div class="jumbotron text-center" style="margin-bottom:0">
+            <h1>Body Mass Index Calculator</h1>
+            <p>ToolKib</p>
+            <p>Ready to Provide Your Desired Tools</p>
+        </div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand">Toolkib</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="toolkib-converters.html">Convertor</a></li>
+                        <li><a href="toolkib-online-generator.html">Online Generator</a></li>
+                        <li><a href="toolkib-mathmatical-tools.html">Mathematical Tools</a></li>
+                        <li><a href="toolkib-more-tools.html">More</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+    
+                <div class="col-sm-8">
+                    <div class="well text-center">
+                        <form name="bmif">
+                            <h3>Body Mass Index</h3>
+                            <br/>
+                            <input type="text" name="weight" placeholder="Your Weight in kg" size="20"><br /><br/>
+                            <input type="text" name="height" placeholder="Your Height in Meters" size="20"><br /><br/>
+                            <input class="yes px-3 py-2" type="button" value="Calculate BMI" onClick="calculateBmi()"><br /><br/>
+                            <input type="text" name="bmi" placeholder="Your BMI Will be here" size="20"><br /><br/>
+                            <input class="no" type="text" name="meaning" size="35"><br /><br/>
+                            <input class="yes px-3 py-2" type="reset" value="Reset" />
+                            <br/><br/>
+                            Need to Convert this Weight to other Units?<br><br/>
+                            <a class="yes px-3 py-2" href="weight-converter.html">Weight Convertor by ToolKib</a>
+                            <br/>
+                            <br/>
+                            
+                        </form>
+                        <form name="hei">
+                            Need to Convert Height from Feet and Inch to Meters?
+                            <br/>
+                            Try Below: <br>
+                            <p>
+                            
+                                <input type="text" name="feet" placeholder="Feet" size="20"><br /><br/>
+                            <input type="text" name="inch" placeholder="Inch" size="20"><br /><br/>
+                              <br/><input class="yes px-3 py-2" type="button" value="Find Heighht in Meters" onClick="calculateFI()"><br />
+                              <br/> <p><input type="text" name="hhh" placeholder="Your Height Will be here" size="20"><br /><br/></p>
+    
+                        </form>
+                    </div>
+                </div>
+    
+                <div class="col-sm-4">
+                    <!-- place for ads, banner -->
+                    
+                </div>
+    
+            </div>
+    
+        </div>
+        
+        <div class="article container">
+           
+            <h2 class="text-center well">Body Mass Index Calculator</h2>
+             <div style="text-align: center;margin-bottom: 10px;">
+                <img src="Toolkib Thumbnail/Body Mass Index Calculator.png" class="img-thumbnail" alt="BMI calculator"
+                    title="BMI calculator">
+            </div>
+                <p>BMI or Body Mass Index refers to the ratio of a person’s weight in kg and the square of height in meters. It indicates a person’s health condition. It may be used to screen for weight categories which can lead a person to health problems. It actually tries to declare if a man or women is thin, healthy or having over weight. </p>
+                <p>Formula:<b> Body Mass Index (BMI) = Weight in Kilograms/ (Height in meters)<sup>2</sup></b></p>
+                <p>BMI Chart is given below by ToolKib for your help. </p>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>BMI Value</th>
+                        <th>
+                            Conditon of Body
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>Less than 18.5</td>
+                        <td>Too Thin</td>
+                    </tr>
+                    <tr>
+                        <td>18.5 to 24.9</td>
+                        <td>Healthy</td>
+                    </tr>
+                
+                <tr>
+                    <td>25.0-29.9</td>
+                    <td>Overweight</td>
+                </tr>
+            
+            <tr>
+                <td>30.0+ </td>
+                <td>Dangerous</td>
+            </tr>
+        </table>
+                
+                <h3>Advantages of Using ToolKib’s BMI Calculator:</h3>
+                <p>First of all, it is not like other tools available in the internet. Other tools may have the opportunity to calculate BMI using your height in meters and your weight in Kilograms. But ToolKib offers you that and also it offers you to calculate using your height in Feet and Inch, in which unit we normally measure our height. </p>
+        </div>
+        </main>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <h3><a href="about.html">Toolkib</a></h3>
+                    <p>A Part Of Pathgriho Network</p>
+                    <p>&copy;<a href="https://pathgriho.com"> Pathgriho: Since 2020</a></p>
+                    <p>Find all types of helpful online tools. Free to use. Easy to understand.</p>
+                </div>
+                <div class="col-md-3">
+                    <h3>More Tools</h3>
+                    <ul>
+                        <li><a href="weight-converter.html" class="linktext">Monitor Size</a></li>
+                        <li><a href="international-dialing-codes.html" class="linktext">Country and ISO Code</a></li>
+                        <li><a href="binary-decimal-hexadecimal-converter.html" class="linktext">Auto Password Generator</a></li>
+                        <li><a href="terms-and-conditions.html" class="linktext">Temperature Convertor</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h3>Our Policies</h3>
+                    <ul>
+                        <li><a href="contact-us.html" class="linktext">Contact Us</a></li>
+                        <li><a href="disclaimer.html" class="linktext">Disclaimer</a></li>
+                        <li><a href="privacy-policy.html" class="linktext">Privacy Policies</a></li>
+                        <li><a href="terms-and-conditions.html" class="linktext">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Follow us on</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/pathgriho71" class="linktext">Facebook</a></li>
+                        <li><a href="https://www.pathgriho.com" class="linktext">Pathgriho The Reading Room</a></li>
+                        <li><a href="https://tech.pathgriho.com" class="linktext">TechKib</a></li>
+                        <li><a href="https://dm.pathgriho.com" class="linktext">Different Marketing</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="text-align: center;">
+            <p><a href="https://www.facebook.com/pathgriho71" class="footericon"><img src="facebook.svg"
+                        class="socialicon"></a>
+                <a href="https://www.linkedin.com/company/pathgriho-network" class="footericon"><img src="linkedin.svg"
+                        class="socialicon"></a>
+                <a href="https://sigmakib2.github.io/pathgriho-network-dev/" class="footericon"><img src="github.svg" class="socialicon"></a></p>
+            <p>Developers: <a href="https://www.linkedin.com/in/sakib-mahmud-175575192" style="color: turquoise;">Sakib Mahmud</a> and <a href="https://www.linkedin.com/in/rabi0249/"
+                    style="color: turquoise;">Mohammad Rabiul Mollah</a></p>
+        </div>
+    </footer>
+    <script src="bmi.js"></script>
+</body>
+
+</html>
