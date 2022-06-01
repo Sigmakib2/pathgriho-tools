@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /search
-Allow: /
-Sitemap:https://toolkib.netlify.app/sitemap.xml
