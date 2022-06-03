@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="এই বয়স ক্যালকুলেটর বা Age Calculator ব্যবহার করে নির্ণয় করতে পারবেন আপনার বয়স।">
+        content="এখানে আপনি ফুট থেকে মিটারে রূপান্তর করতে পারবেন।">
     <meta name="author" content="Pathgriho">
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
     <meta property="og:site_name" content="Pathgriho Tools" /> <!-- website name -->
     <meta property="og:site" content="https://tool.pathgriho.com/" /> <!-- website link -->
-    <meta property="og:title" content="বয়স ক্যালকুলেটর" /> <!-- title shown in the actual shared post -->
+    <meta property="og:title" content="ফুট থেকে মিটার" /> <!-- title shown in the actual shared post -->
     <meta property="og:description"
-        content="এই বয়স ক্যালকুলেটর বা Age Calculator ব্যবহার করে নির্ণয় করতে পারবেন যে আপনার বয়স কত" />
+        content="এখানে আপনি ফুট থেকে মিটারে রূপান্তর করতে পারবেন।" />
     <!-- description shown in the actual shared post -->
     <meta property="og:image" content="https://tool.pathgriho.com/thumbnails/age-calculator.jpg" />
     <!-- image link, make sure it's jpg -->
@@ -29,7 +29,7 @@
         gtag('config', 'G-S99SERZBKK');
     </script>
     <!-- Webpage Title -->
-    <title>বয়স ক্যালকুলেটর</title>
+    <title>ফুট থেকে মিটার</title>
     <!-- Styles -->
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/fontawesome-all.css" rel="stylesheet">
@@ -96,8 +96,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>বয়স ক্যালকুলেটর</h1>
-                    <p>এই বয়স ক্যালকুলেটর বা Age Calculator ব্যবহার করে নির্ণয় করতে পারবেন যে আপনার বয়স কত!</p>
+                    <h1>ফুট থেকে মিটার</h1>
+                    <p>এখানে আপনি ফুট থেকে মিটারে কনভার্ট করতে পারবেন।</p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -110,65 +110,17 @@
                 <div class="row">
                     <div class="col-sm-8 ex-basic-1">
                         <div class="text-container dark">
-                            <form id="form" autocomplete="off">
-                                <div>
-                                    <p><b>জন্ম তারিখ ইনপুট করুন:</b></p>
-                                    <table class="table-bordered" style="width: 100%;">
-                                        <tr>
-                                            <th>দিন</th>
-                                            <th>মাস</th>
-                                            <th>বছর</th>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input type="number" maxlength="2" size="2" id="date" min="1" max="31"
-                                                    required class="form-control" />
-                                            </td>
-                                            <td>
-                                                <input type="number" min="1" max="12" id="month" required
-                                                    class="form-control" />
-                                            </td>
-                                            <td>
-                                                <input type="number" maxlength="4" size="4" id="year" required
-                                                    class="form-control" min="1" max="9999" />
-                                            </td>
-                                        </tr>
-
-                                    </table>
-                                </div>
-                                <div>
-                                    <p><b>যে তারিখে বয়স:</b></p>
-                                    <table class="table-bordered" style="width: 100%;">
-                                        <tr>
-                                            <th>দিন</th>
-                                            <th>মাস</th>
-                                            <th>বছর</th>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input type="number" maxlength="2" size="2" id="date2"
-                                                    placeholder="Date" min="1" max="31" class="form-control" />
-                                            </td>
-                                            <td>
-                                                <input type="number" maxlength="2" size="2" min="1" max="12" id="month2"
-                                                    placeholder="Month" class="form-control" />
-                                            </td>
-                                            <td>
-                                                <input type="number" maxlength="4" size="4" id="year2"
-                                                    placeholder="Year" min="1" max="9999" class="form-control" />
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div style="text-align: center; margin-top: 10px;">
-                                    <button id="calbtn" class="btn btn-primary btn-lg">বয়স দেখুন</button>
-                                </div>
-                                <div class="" style="margin-top: 10px;text-align: center;">
-                                    <p><span id="age"></span>&nbsp;<span id="months"></span>&nbsp;<span
-                                            id="days"></span>
-                                    </p>
-                                </div>
-                            </form>
+                            <p>
+                                <label>ফুট</label>
+                                <input id="inputFeet" class="form-control" type="number" placeholder="Feet" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+                              </p>
+                              <p>মিটার: <span id="outputMeters"></span></p>
+                              
+                              <script>
+                              function LengthConverter(valNum) {
+                                document.getElementById("outputMeters").innerHTML=valNum/3.2808;
+                              }
+                              </script>
                         </div>
                     </div>
                     <div class="col-sm-4">
@@ -184,61 +136,50 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-container">
-                            <h2>বয়স ক্যালকুলেটর যেভাবে ব্যবহার করবেন</h2>
-                            <p>আজকে আপনার বয়স কত বা একটি নির্দিষ্ট তারিখে আপনার বয়স কত হবে বা ছিল সেটি হিসাব করার জন্য
-                                আপনি আমাদের এই বয়স ক্যালকুলেটর ব্যবহার করতে পারবেন।
-                                এজন্য আপনাকে আপনার জন্ম তারিখ জানতে হবে। প্রথমত আপনি আপনার জন্মদিন কবে ছিল সেটি ইংরেজি
-                                সংখ্যায় ইনপুট করবেন। তারপর কত তম মাসে আপনার জন্ম তা ইংরেজি সংখ্যায় ইনপুট করবেন। এবং শেষে
-                                যে বছরে আপনার জন্ম তা ইংরেজি সংখ্যায় ইনপুট করবেন।
+                            <h2>ফুট থেকে মিটার যেভাবে নির্ণয় করবেন</h2>
+                            <p>
+                                ফুট থেকে মিটার এককে যদি পরিবর্তন করতে হয় তবে আমাদেরকে ফুট এককে যে সংখ্যাটি রয়েছে 
+                                তাকে 3.2808 দিয়ে ভাগ করতে হবে। ভাগফলই হবে ওই ফুট এককের মিটার একক।
                             </p>
-                            <p>আপনি যদি আজকের তারিখে আপনার বয়স নির্ণয় করতে চান তবে তার জন্য নতুন করে কোন কিছু ইনপুট
-                                করতে হবে না। শুধুমাত্র 'বয়স দেখুন' বাটনে ক্লিক করলে আপনাকে আপনার বয়স দেখানো হবে। আপনি
-                                যদি কোন একটা নির্দিষ্ট তারিখে আপনার বয়স কত তা দেখতে চান তবে যে তারিখে বয়স দেখতে চান তা
-                                ইনপুট করে 'বয়স দেখুন' বাটনে ক্লিক করলে আপনাকে সেই তারিখে আপনার বয়স দেখানো হবে!</p>
+                            <p>
+                                ধরুন আপনি একটি পরিমাপ গ্রহণ করেছেন এবং সেখান থেকে আপনি কোন কিছু দৈর্ঘ্য 5 
+                                ফুট পেয়েছেন। এখন আপনি চাচ্ছেন সেই দৈর্ঘ্যকে মিটারে রূপান্তর করতে। 
+                                এক্ষেত্রে অবশ্যই আপনাকে 5 কে 3.2808 দ্বারা ভাগ করতে হবে এবং ভাগফলই হবে মিটারে পরিবর্তিত 
+                                রূপ। সুতরাং 5 ফুট = (5/3.2808) = 1.5240 মিটার।
+                            </p>
                         </div> <!-- end of text-container-->
 
                         <div class="text-container">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <h3>বয়স ক্যালকুলেটর যেভাবে কাজ করে:</h3>
-                                    <p>কোন কিছুর বয়স নির্ণয় করতে হলে সেটি যে সময় তৈরি হয়েছে সেই সময় থেকে বর্তমান
-                                        সময়ে ঠিক কতদিন এবং কত বছর হয়েছে অতিবাহিত হয়েছে সে সময় কে নির্ণয় করা হয়। এই
-                                        অতিবাহিত সময়টি হচ্ছে ঐ বস্তুর বয়স।</p>
-                                    <p>একটি Age Calculator বা বয়স ক্যালকুলেটর মূলত বর্তমান সময় থেকে আপনার জন্ম তারিখ
-                                        বিয়োগ করে থাকে এবং বিয়োগফলকে উপস্থাপন করে থাকে। এক্ষেত্রে বেশ কিছু নিয়ম মানা
-                                        হয়ে থাকে দিন, মাস, বছর হিসাব করার ক্ষেত্রে।</p>
-                                    <p>মূলত এভাবে বয়স ক্যালকুলেটর এর সফটওয়্যার কাজ করে থাকে এবং সঠিক বয়স দেখিয়ে থাকে।
+                                    <h3>এক ফুট সমান কত মিটার?</h3>
+                                    <p>
+                                        ১ ফুট = ০.৩০৪৮ মিটার। ০.৩০৪৮ মিটারে ১ ফুট। মূলত এই সূত্রকে কাজে লাগিয়ে আমরা 
+                                        ফুট থেকে মিটার এককে রূপান্তর করতে পারব। একইভাবে আমরা মিটার থেকে ফুট এককেও
+                                         রূপান্তর করতে পারব। এজন্য এই সূত্রটির মনে রাখতে হবে।
+                                    </p>
+                                    <p>
+                                        বিভিন্ন ক্ষেত্রে আমাদের ফিট থেকে মিটারে দৈর্ঘ্যতে পরিবর্তন করতে হয়। এজন্য অবশ্যই আমাদের
+                                         এই সূত্রটি কাজে লাগাতে হবে এবং এর মাধ্যমে আমরা ফিট থেকে মিটারে রূপান্তর করতে পারব।
                                     </p>
                                 </div> <!-- end of col -->
                                 <div class="col-md-6">
                                     <div class="image-container-small">
-                                        <img class="img-fluid" src="/thumbnails/age-calculator.png" alt="বয়স ক্যালকুলেটর">
+                                        <img class="img-fluid" src="/thumbnails/feet-to-meter.jpg" alt="ফুট থেকে মিটারে রূপান্তর">
                                     </div> <!-- end of image-container-small -->
                                 </div> <!-- end of col -->
                             </div> <!-- end of row -->
                         </div> <!-- end of text-container -->
-
+                        <table class="table"><tbody><tr><th>ফুট</th><th>মিটার</th></tr><tr><td>১</td><td>০.৩০৪৮</td></tr><tr><td>২</td><td>০.৬০৯৬</td></tr><tr><td>৫</td><td>১.৫২৪০</td></tr><tr><td>১০</td><td>৩.০৪৮০</td></tr><tr><td>১৫</td><td>৪.৫৭২১</td></tr><tr><td>২০</td><td>৬.০৯৬১</td></tr><tr><td>২৫</td><td>৭.৬২০১</td></tr><tr><td>১০০</td><td>৩০.৪৮০৪</td></tr><tr><td>২০০</td><td>৬০.৯৬০৭</td></tr><tr><td>৫০০</td><td>১৫২.৪০১৯</td></tr></tbody></table>
                         <div class="text-container dark">
-                            <p class="testimonial-text">ধরুন আপনার জন্য আপনার জন্ম ২০০০ সালে এবং বর্তমানে ২০২২ সাল চলছে।
-                                সেই ক্ষেত্রে আপনার বয়স হচ্ছে: 2022-2000 = 22 বছর।
-                                একইভাবে মাস এবং দিনের হিসাব করার জন্য আমাদের লেখা <a
-                                    href="https://www.pathgriho.com/2021/06/online-age-calculator-Bangla.html">বয়স
-                                    নির্ণয়ে দিন ও মাস কিভাবে হিসাব করা হয়</a> আর্টিকেলটি পড়তে পারেন।
+                            <p class="testimonial-text">
+                                ধরুন আপনি একটি পরিমাপ গ্রহণ করেছেন এবং সেখান থেকে আপনি কোন কিছু দৈর্ঘ্য ১০ 
+                                ফুট পেয়েছেন। এখন আপনি চাচ্ছেন সেই দৈর্ঘ্যকে মিটারে রূপান্তর করতে। 
+                                এক্ষেত্রে অবশ্যই আপনাকে ১০ কে ৩.২৮০৮ দ্বারা ভাগ করতে হবে এবং ভাগফলই হবে মিটারে পরিবর্তিত 
+                                রূপ। সুতরাং ১০ ফুট = (10/3.2808) = 3.048037 মিটার।
                             </p>
                         </div> <!-- end of text container -->
-
-                        <div class="text-container last">
-                            <h3>বয়স ক্যালকুলেটর কতটা নির্ভুল?</h3>
-                            <p>সারা পৃথিবী জুড়ে বিভিন্ন সংস্কৃতিতে বয়স গণনা করার অনেকগুলো পদ্ধতি রয়েছে। বয়স গণনা
-                                করার এই পদ্ধতিগুলোর ভিত্তিতে
-                                আলাদা আলাদা করে হিসাব করা হয়ে থাকে। কিছু নিয়মের ক্ষেত্রে দেখা যায় লিপিয়ার গণনা করা
-                                হয় না। আবার কিছু কিছু ক্ষেত্রে
-                                দেখা যায় প্রত্যেক মাসকে 30 দিন ধরে হিসাব করা হয়ে থাকে। এ ধরনের বিভিন্ন বিচিত্রতা
-                                হিসাবগুলোয় দেখা যায়।
-                                আমাদের এই বয়স ক্যালকুলেটরটি আমরা আন্তর্জাতিক এককের উপরে ভিত্তি করে
-                                তৈরি করেছি। এটি মূলত সারা পৃথিবী জুড়ে ব্যবহার করা হয়ে থাকে। </p>
-                        </div> <!-- end of text-container -->
-                        <a class="btn-solid-reg" href="index.html">সব ক্যালকুলেটর</a>
+                        <a class="btn-solid-reg" href="/Conversion/">সব কনভার্টার</a>
                     </div> <!-- end of col-->
                 </div> <!-- end of row -->
             </div> <!-- end of container -->
@@ -251,8 +192,8 @@
                     <div class="col-lg-12">
                         <div class="breadcrumbs">
                             <a href="/index.html">Home</a><i class="fa fa-angle-double-right"></i><a
-                                href="/calculators/">calculators</a><i
-                                class="fa fa-angle-double-right"></i><span>Age-calculator</span>
+                                href="/Conversion/">Conversion</a><i
+                                class="fa fa-angle-double-right"></i><span>Feet To Meter</span>
                         </div> <!-- end of breadcrumbs -->
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
