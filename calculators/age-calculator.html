@@ -21,7 +21,13 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S99SERZBKK"></script>
-    <script src="/scripts.js/analitics.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-S99SERZBKK');
+    </script>
 
     <!-- Webpage Title -->
     <title>বয়স ক্যালকুলেটর</title>
