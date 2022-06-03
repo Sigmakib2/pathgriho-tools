@@ -19,6 +19,16 @@
     <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
     <meta property="og:type" content="article" />
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S99SERZBKK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-S99SERZBKK');
+    </script>
+
     <!-- Webpage Title -->
     <title>বয়স ক্যালকুলেটর</title>
 
@@ -79,6 +89,7 @@
                         <a class="nav-link page-scroll" href="/Productivity/">প্রডাক্টিভিটি টুল</a>
                     </li>
 
+
                     <!-- Dropdown Menu -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle page-scroll" id="navbarDropdown" role="button"
@@ -91,6 +102,9 @@
                         </div>
                     </li>
                     <!-- end of dropdown menu -->
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/search.html"><i class="fa fa-search"></i></a>
+                    </li>
                 </ul>
                 <span class="nav-item">
                     <a class="btn-outline-sm page-scroll" href="https://pathgriho.com/">আমাদের ব্লগ</a>
@@ -106,8 +120,6 @@
                 <div class="col-md-12">
                     <h1>বয়স ক্যালকুলেটর</h1>
                     <p>এই বয়স ক্যালকুলেটর বা Age Calculator ব্যবহার করে নির্ণয় করতে পারবেন যে আপনার বয়স কত!</p>
-                    <script async src="https://cse.google.com/cse.js?cx=45798f10370f72a46"></script>
-                    <div class="gcse-search"></div>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -117,245 +129,274 @@
     <!-- tool section start -->
     <main>
         <div class="ex-basic-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 ex-basic-1">
-                    <div class="text-container dark">
-                        <form id="form" autocomplete="off">
-                            <div>
-                                <p><b>জন্ম তারিখ ইনপুট করুন:</b></p>
-                                <table class="table-bordered" style="width: 100%;">
-                                    <tr>
-                                        <th>দিন</th>
-                                        <th>মাস</th>
-                                        <th>বছর</th>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="number" maxlength="2" size="2" id="date" min="1" max="31"
-                                                required class="form-control" />
-                                        </td>
-                                        <td>
-                                            <input type="number" min="1" max="12" id="month" required
-                                                class="form-control" />
-                                        </td>
-                                        <td>
-                                            <input type="number" maxlength="4" size="4" id="year" required
-                                                class="form-control" min="1" max="9999" />
-                                        </td>
-                                    </tr>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 ex-basic-1">
+                        <div class="text-container dark">
+                            <form id="form" autocomplete="off">
+                                <div>
+                                    <p><b>জন্ম তারিখ ইনপুট করুন:</b></p>
+                                    <table class="table-bordered" style="width: 100%;">
+                                        <tr>
+                                            <th>দিন</th>
+                                            <th>মাস</th>
+                                            <th>বছর</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="number" maxlength="2" size="2" id="date" min="1" max="31"
+                                                    required class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="number" min="1" max="12" id="month" required
+                                                    class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="number" maxlength="4" size="4" id="year" required
+                                                    class="form-control" min="1" max="9999" />
+                                            </td>
+                                        </tr>
 
-                                </table>
-                            </div>
-                            <div>
-                                <p><b>যে তারিখে বয়স:</b></p>
-                                <table class="table-bordered" style="width: 100%;">
-                                    <tr>
-                                        <th>দিন</th>
-                                        <th>মাস</th>
-                                        <th>বছর</th>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="number" maxlength="2" size="2" id="date2" placeholder="Date"
-                                                min="1" max="31" class="form-control" />
-                                        </td>
-                                        <td>
-                                            <input type="number" maxlength="2" size="2" min="1" max="12" id="month2"
-                                                placeholder="Month" class="form-control" />
-                                        </td>
-                                        <td>
-                                            <input type="number" maxlength="4" size="4" id="year2" placeholder="Year"
-                                                min="1" max="9999" class="form-control" />
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div style="text-align: center; margin-top: 10px;">
-                                <button id="calbtn" class="btn btn-primary btn-lg">বয়স দেখুন</button>
-                            </div>
-                            <div class="" style="margin-top: 10px;text-align: center;">
-                                <p><span id="age"></span>&nbsp;<span id="months"></span>&nbsp;<span id="days"></span>
-                                </p>
-                            </div>
-                        </form>
+                                    </table>
+                                </div>
+                                <div>
+                                    <p><b>যে তারিখে বয়স:</b></p>
+                                    <table class="table-bordered" style="width: 100%;">
+                                        <tr>
+                                            <th>দিন</th>
+                                            <th>মাস</th>
+                                            <th>বছর</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="number" maxlength="2" size="2" id="date2"
+                                                    placeholder="Date" min="1" max="31" class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="number" maxlength="2" size="2" min="1" max="12" id="month2"
+                                                    placeholder="Month" class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="number" maxlength="4" size="4" id="year2"
+                                                    placeholder="Year" min="1" max="9999" class="form-control" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div style="text-align: center; margin-top: 10px;">
+                                    <button id="calbtn" class="btn btn-primary btn-lg">বয়স দেখুন</button>
+                                </div>
+                                <div class="" style="margin-top: 10px;text-align: center;">
+                                    <p><span id="age"></span>&nbsp;<span id="months"></span>&nbsp;<span
+                                            id="days"></span>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <!-- palce ads here -->
+                    <div class="col-sm-4">
+                        <!-- palce ads here -->
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- end tool section -->
+        <!-- end tool section -->
 
-    <!-- start article section -->
-    <div class="ex-basic-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-container">
-                        <h2>বয়স ক্যালকুলেটর যেভাবে ব্যবহার করবেন</h2>
-                        <p>আজকে আপনার বয়স কত বা একটি নির্দিষ্ট তারিখে আপনার বয়স কত হবে বা ছিল সেটি হিসাব করার জন্য আপনি আমাদের এই বয়স ক্যালকুলেটর ব্যবহার করতে পারবেন।
-                            এজন্য আপনাকে আপনার জন্ম তারিখ জানতে হবে। প্রথমত আপনি আপনার জন্মদিন কবে ছিল সেটি ইংরেজি সংখ্যায় ইনপুট করবেন। তারপর কত তম মাসে আপনার জন্ম তা ইংরেজি সংখ্যায় ইনপুট করবেন। এবং শেষে যে বছরে আপনার জন্ম তা ইংরেজি সংখ্যায় ইনপুট করবেন।
-                        </p>
-                        <p>আপনি যদি আজকের তারিখে আপনার বয়স নির্ণয় করতে চান তবে তার জন্য নতুন করে কোন কিছু ইনপুট করতে হবে না। শুধুমাত্র 'বয়স দেখুন' বাটনে ক্লিক করলে আপনাকে আপনার বয়স দেখানো হবে। আপনি যদি কোন একটা নির্দিষ্ট তারিখে আপনার বয়স কত তা দেখতে চান তবে যে তারিখে বয়স দেখতে চান তা ইনপুট করে 'বয়স দেখুন' বাটনে ক্লিক করলে আপনাকে সেই তারিখে আপনার বয়স দেখানো হবে!</p>
-                    </div> <!-- end of text-container-->
-                    
-                    <div class="text-container">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h3>বয়স ক্যালকুলেটর যেভাবে কাজ করে:</h3>
-                                <p>Sync also automatically collects and receives certain information from your computer or mobile device, including the activities you perform on our Website, the Platforms, and the Applications, the type of hardware and software you are using (for example, your operating system or browser), and information obtained.</p>
-                                <p>For example, each time you visit the Website or otherwise use the Services, we automatically collect your IP address, browser and device type, access times, the web page.</p>
-                                <p>The best way to promoted digital products is to provide potential users.</p>
-                            </div> <!-- end of col -->
-                            <div class="col-md-6">
-                                <div class="image-container-small">
-                                    <img class="img-fluid" src="/thumbnails/age-calculator.png" alt="alternative">
-                                </div> <!-- end of image-container-small -->
-                            </div> <!-- end of col -->
-                        </div> <!-- end of row -->
-                    </div> <!-- end of text-container -->
+        <!-- start article section -->
+        <div class="ex-basic-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-container">
+                            <h2>বয়স ক্যালকুলেটর যেভাবে ব্যবহার করবেন</h2>
+                            <p>আজকে আপনার বয়স কত বা একটি নির্দিষ্ট তারিখে আপনার বয়স কত হবে বা ছিল সেটি হিসাব করার জন্য
+                                আপনি আমাদের এই বয়স ক্যালকুলেটর ব্যবহার করতে পারবেন।
+                                এজন্য আপনাকে আপনার জন্ম তারিখ জানতে হবে। প্রথমত আপনি আপনার জন্মদিন কবে ছিল সেটি ইংরেজি
+                                সংখ্যায় ইনপুট করবেন। তারপর কত তম মাসে আপনার জন্ম তা ইংরেজি সংখ্যায় ইনপুট করবেন। এবং শেষে
+                                যে বছরে আপনার জন্ম তা ইংরেজি সংখ্যায় ইনপুট করবেন।
+                            </p>
+                            <p>আপনি যদি আজকের তারিখে আপনার বয়স নির্ণয় করতে চান তবে তার জন্য নতুন করে কোন কিছু ইনপুট
+                                করতে হবে না। শুধুমাত্র 'বয়স দেখুন' বাটনে ক্লিক করলে আপনাকে আপনার বয়স দেখানো হবে। আপনি
+                                যদি কোন একটা নির্দিষ্ট তারিখে আপনার বয়স কত তা দেখতে চান তবে যে তারিখে বয়স দেখতে চান তা
+                                ইনপুট করে 'বয়স দেখুন' বাটনে ক্লিক করলে আপনাকে সেই তারিখে আপনার বয়স দেখানো হবে!</p>
+                        </div> <!-- end of text-container-->
 
-                    <div class="text-container dark">
-                        <p class="testimonial-text">Sync is a HTML landing page template tool. By its nature, Services enable our customers to promote their products and services integrate with hundreds of business applications that they already use, all in one place. Services help our customers promote their products and services, marketing and advertising; engaging audiences; scheduling and publishing.</p>
-                    </div> <!-- end of text container -->
+                        <div class="text-container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3>বয়স ক্যালকুলেটর যেভাবে কাজ করে:</h3>
+                                    <p>কোন কিছুর বয়স নির্ণয় করতে হলে সেটি যে সময় তৈরি হয়েছে সেই সময় থেকে বর্তমান
+                                        সময়ে ঠিক কতদিন এবং কত বছর হয়েছে অতিবাহিত হয়েছে সে সময় কে নির্ণয় করা হয়। এই
+                                        অতিবাহিত সময়টি হচ্ছে ঐ বস্তুর বয়স।</p>
+                                    <p>একটি Age Calculator বা বয়স ক্যালকুলেটর মূলত বর্তমান সময় থেকে আপনার জন্ম তারিখ
+                                        বিয়োগ করে থাকে এবং বিয়োগফলকে উপস্থাপন করে থাকে। এক্ষেত্রে বেশ কিছু নিয়ম মানা
+                                        হয়ে থাকে দিন, মাস, বছর হিসাব করার ক্ষেত্রে।</p>
+                                    <p>মূলত এভাবে বয়স ক্যালকুলেটর এর সফটওয়্যার কাজ করে থাকে এবং সঠিক বয়স দেখিয়ে থাকে।
+                                    </p>
+                                </div> <!-- end of col -->
+                                <div class="col-md-6">
+                                    <div class="image-container-small">
+                                        <img class="img-fluid" src="/thumbnails/age-calculator.png" alt="alternative">
+                                    </div> <!-- end of image-container-small -->
+                                </div> <!-- end of col -->
+                            </div> <!-- end of row -->
+                        </div> <!-- end of text-container -->
 
-                    <div class="text-container last">
-                        <h3>Project Evaluation And Predictions</h3>
-					    <p>By using any of the Services, or submitting or collecting any Personal Information via the Services, you consent to the collection, transfer, storage disclosure, and use of your Personal Information in the manner set out in this Privacy Policy. If you do not consent to the use of your Personal Information in these ways, please stop using the Services. Information in the manner set out in this Privacy Policy. If you do not consent to the use of your Personal Information in these ways, please stop using the Services.</p>
-                    </div> <!-- end of text-container -->
-                    <a class="btn-solid-reg" href="index.html">BACK</a>
-                </div> <!-- end of col-->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-2 -->
-    <!-- End of article section -->
+                        <div class="text-container dark">
+                            <p class="testimonial-text">ধরুন আপনার জন্য আপনার জন্ম ২০০০ সালে এবং বর্তমানে ২০২২ সাল চলছে।
+                                সেই ক্ষেত্রে আপনার বয়স হচ্ছে: 2022-2000 = 22 বছর।
+                                একইভাবে মাস এবং দিনের হিসাব করার জন্য আমাদের লেখা <a
+                                    href="https://www.pathgriho.com/2021/06/online-age-calculator-Bangla.html">বয়স
+                                    নির্ণয়ে দিন ও মাস কিভাবে হিসাব করা হয়</a> আর্টিকেলটি পড়তে পারেন।
+                            </p>
+                        </div> <!-- end of text container -->
 
-    <!-- Breadcrumbs -->
-    <div class="ex-basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumbs">
-                        <a href="/index.html">Home</a><i class="fa fa-angle-double-right"></i><a href="/calculators/">calculators</a><i class="fa fa-angle-double-right"></i><span>Age-calculator</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of breadcrumbs -->
+                        <div class="text-container last">
+                            <h3>বয়স ক্যালকুলেটর কতটা নির্ভুল?</h3>
+                            <p>সারা পৃথিবী জুড়ে বিভিন্ন সংস্কৃতিতে বয়স গণনা করার অনেকগুলো পদ্ধতি রয়েছে। বয়স গণনা
+                                করার এই পদ্ধতিগুলোর ভিত্তিতে
+                                আলাদা আলাদা করে হিসাব করা হয়ে থাকে। কিছু নিয়মের ক্ষেত্রে দেখা যায় লিপিয়ার গণনা করা
+                                হয় না। আবার কিছু কিছু ক্ষেত্রে
+                                দেখা যায় প্রত্যেক মাসকে 30 দিন ধরে হিসাব করা হয়ে থাকে। এ ধরনের বিভিন্ন বিচিত্রতা
+                                হিসাবগুলোয় দেখা যায়।
+                                আমাদের এই বয়স ক্যালকুলেটরটি আমরা আন্তর্জাতিক এককের উপরে ভিত্তি করে
+                                তৈরি করেছি। এটি মূলত সারা পৃথিবী জুড়ে ব্যবহার করা হয়ে থাকে। </p>
+                        </div> <!-- end of text-container -->
+                        <a class="btn-solid-reg" href="index.html">সব ক্যালকুলেটর</a>
+                    </div> <!-- end of col-->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of ex-basic-2 -->
+        <!-- End of article section -->
+
+        <!-- Breadcrumbs -->
+        <div class="ex-basic-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="breadcrumbs">
+                            <a href="/index.html">Home</a><i class="fa fa-angle-double-right"></i><a
+                                href="/calculators/">calculators</a><i
+                                class="fa fa-angle-double-right"></i><span>Age-calculator</span>
+                        </div> <!-- end of breadcrumbs -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of ex-basic-1 -->
+        <!-- end of breadcrumbs -->
+        <!-- Footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-col first">
+                            <h5>Pathgriho Web Apps</h5>
+                            <p class="p-small">Our website will allow you to use various software in your browser that
+                                we
+                                require in many situations in our daily lives.</p>
+                        </div> <!-- end of footer-col -->
+                        <div class="footer-col">
+                            <h5>Contact Info</h5>
+                            <ul class="list-unstyled li-space-lg p-small">
+                                <li class="media">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div class="media-body">Dhaka-1311, Bangladesh</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-envelope"></i>
+                                    <div class="media-body"><a
+                                            href="mailto:contact@pathgriho.com">contact@pathgriho.com</a>
+                                    </div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-envelope"></i>
+                                    <div class="media-body"><a href="mailto:sakib@pathgriho.com">sakib@pathgriho.com</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> <!-- end of footer-col -->
+                        <div class="footer-col third">
+                            <h5>Policy Pages</h5>
+                            <ul class="list-unstyled li-space-lg p-small">
+                                <li><a href="https://www.pathgriho.com/p/terms-and-conditions.html">Terms &
+                                        Conditions</a>
+                                </li>
+                                <li><a href="https://www.pathgriho.com/p/at-reading-room-accessible-from.html">Privacy
+                                        Policy</a></li>
+                                <li><a
+                                        href="https://www.pathgriho.com/p/if-you-require-any-more-information-or.html">Disclaimer</a>
+                                </li>
+                            </ul>
+                        </div> <!-- end of footer-col -->
+                        <div class="footer-col fourth">
+                            <h5>More</h5>
+                            <ul class="list-unstyled li-space-lg p-small">
+                                <li><a href="https://www.pathgriho.com/">Pathgriho Blog</a></li>
+                                <li><a href="https://www.pathgriho.com/p/engineering.pathgriho.com">Engineering
+                                        Lessons</a>
+                                </li>
+                                <li><a href="https://tech.pathgriho.com/">TechKib</a></li>
+                            </ul>
+                        </div> <!-- end of footer-col -->
+                        <div class="footer-col fifth">
+                            <span class="fa-stack">
+                                <a href="https://www.facebook.com/pathgriho71">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack">
+                                <a href="https://www.youtube.com/c/PathgrihoNetwork">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-youtube fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack">
+                                <a href="https://www.linkedin.com/company/pathgriho-network">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-linkedin fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack">
+                                <a href="https://t.me/pathgriho">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-telegram fa-stack-1x"></i>
+                                </a>
+                            </span>
+                        </div> <!-- end of footer-col -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of footer -->
+        <!-- end of footer -->
 
 
-    <!-- Footer -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="footer-col first">
-                        <h5>Pathgriho Web Apps</h5>
-                        <p class="p-small">Our website will allow you to use various software in your browser that we
-                            require in many situations in our daily lives.</p>
-                    </div> <!-- end of footer-col -->
-                    <div class="footer-col">
-                        <h5>Contact Info</h5>
-                        <ul class="list-unstyled li-space-lg p-small">
-                            <li class="media">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div class="media-body">Dhaka-1311, Bangladesh</div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-envelope"></i>
-                                <div class="media-body"><a href="mailto:contact@pathgriho.com">contact@pathgriho.com</a>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-envelope"></i>
-                                <div class="media-body"><a href="mailto:sakib@pathgriho.com">sakib@pathgriho.com</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div> <!-- end of footer-col -->
-                    <div class="footer-col third">
-                        <h5>Policy Pages</h5>
-                        <ul class="list-unstyled li-space-lg p-small">
-                            <li><a href="https://www.pathgriho.com/p/terms-and-conditions.html">Terms & Conditions</a>
-                            </li>
-                            <li><a href="https://www.pathgriho.com/p/at-reading-room-accessible-from.html">Privacy
-                                    Policy</a></li>
-                            <li><a
-                                    href="https://www.pathgriho.com/p/if-you-require-any-more-information-or.html">Disclaimer</a>
-                            </li>
-                        </ul>
-                    </div> <!-- end of footer-col -->
-                    <div class="footer-col fourth">
-                        <h5>More</h5>
-                        <ul class="list-unstyled li-space-lg p-small">
-                            <li><a href="https://www.pathgriho.com/">Pathgriho Blog</a></li>
-                            <li><a href="https://www.pathgriho.com/p/engineering.pathgriho.com">Engineering Lessons</a>
-                            </li>
-                            <li><a href="https://tech.pathgriho.com/">TechKib</a></li>
-                        </ul>
-                    </div> <!-- end of footer-col -->
-                    <div class="footer-col fifth">
-                        <span class="fa-stack">
-                            <a href="https://www.facebook.com/pathgriho71">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="https://www.youtube.com/c/PathgrihoNetwork">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-youtube fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="https://www.linkedin.com/company/pathgriho-network">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-linkedin fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="https://t.me/pathgriho">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-telegram fa-stack-1x"></i>
-                            </a>
-                        </span>
-                    </div> <!-- end of footer-col -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of footer -->
-    <!-- end of footer -->
+        <!-- Copyright -->
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="p-small">Copyright © 2022 <a href="https://www.pathgriho.com/">Pathgriho</a> - All
+                            rights
+                            reserved</p>
+                    </div> <!-- end of col -->
+                </div> <!-- enf of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of copyright -->
+        <!-- end of copyright -->
 
 
-    <!-- Copyright -->
-    <div class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2022 <a href="https://www.pathgriho.com/">Pathgriho</a> - All rights
-                        reserved</p>
-                </div> <!-- end of col -->
-            </div> <!-- enf of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of copyright -->
-    <!-- end of copyright -->
+        <!-- Scripts -->
+        <script src="/scripts.js/age-calculator.js"></script>
 
-
-    <!-- Scripts -->
-    <script src="/scripts.js/age-calculator.js"></script>
-
-    <script src="/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="/js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
-    <script src="/js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-    <script src="/js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="/js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-    <script src="/js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-    <script src="/js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-    <script src="/js/scripts.js"></script> <!-- Custom scripts -->
+        <script src="/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+        <script src="/js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+        <script src="/js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+        <script src="/js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+        <script src="/js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+        <script src="/js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+        <script src="/js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+        <script src="/js/scripts.js"></script> <!-- Custom scripts -->
 </body>
 
 </html>
