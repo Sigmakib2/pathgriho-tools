@@ -769,7 +769,7 @@ input[type='checkbox'] {
 	position: relative;
 	overflow: hidden;
 	padding-top: 8rem;
-	padding-bottom: 3rem;
+	padding-bottom: 0rem;
 	background-color: #f7fafd;
 	text-align: center;
 }
@@ -1466,7 +1466,6 @@ a:hover.back-to-top {
 /***************************/
 .ex-header {
 	padding-top: 8rem;
-	padding-bottom: 5rem;
 	background-color: #f7fafd;
 	text-align: center;
 }
@@ -1488,7 +1487,7 @@ a:hover.back-to-top {
 }
 
 .ex-basic-2 {
-	padding-top: 4.75rem;
+
 	padding-bottom: 4rem;
 	background-color: #f7fafd;
 }
