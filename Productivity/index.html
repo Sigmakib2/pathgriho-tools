@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="well">
+                    <h4>Start typing or copy and paste your text here</h4>
+                    <textarea class="form-control" id="text" placeholder="Type or paste text here..." rows="10"
+                        style="resize: vertical;" oninput="countWord()"></textarea>
+
+                    <div style="margin-top: 10px; margin-bottom: 10px;">
+                        <input id='undo' type='button' value='Undo' class="btn-primary" />
+                        <input id='redo' type='button' value='Redo' class="btn-warning" />
+                        <input onclick="document.getElementById('text').value = ''" type='button' value='Clear'
+                            class="btn-danger" />
+                        <input id='save' type='button' value='Save' class="btn-success" />
+                    </div>
+                    <div class="well" style="text-align: center; font-size: 25px;">
+                        <span id="show"></span>
+                        <span id="she"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-4">
+               <!-- place ads here -->
+               
+            </div>
+        </div>
+    </div>
+</body>
+</html>

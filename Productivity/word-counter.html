@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="এখানে আপনি ফুট থেকে মিটারে রূপান্তর করতে পারবেন।">
+        content="এই বয়স ক্যালকুলেটর বা Age Calculator ব্যবহার করে নির্ণয় করতে পারবেন আপনার বয়স।">
     <meta name="author" content="Pathgriho">
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
     <meta property="og:site_name" content="Pathgriho Tools" /> <!-- website name -->
     <meta property="og:site" content="https://tool.pathgriho.com/" /> <!-- website link -->
-    <meta property="og:title" content="ফুট থেকে মিটার" /> <!-- title shown in the actual shared post -->
+    <meta property="og:title" content="বয়স ক্যালকুলেটর" /> <!-- title shown in the actual shared post -->
     <meta property="og:description"
-        content="এখানে আপনি ফুট থেকে মিটারে রূপান্তর করতে পারবেন।" />
+        content="এই বয়স ক্যালকুলেটর বা Age Calculator ব্যবহার করে নির্ণয় করতে পারবেন যে আপনার বয়স কত" />
     <!-- description shown in the actual shared post -->
-    <meta property="og:image" content="https://tool.pathgriho.com/thumbnails/feet-to-meter.jpg" />
+    <meta property="og:image" content="https://tool.pathgriho.com/thumbnails/age-calculator.jpg" />
     <!-- image link, make sure it's jpg -->
-    <meta property="og:url" content="https://tool.pathgriho.com/calculators/feet-to-meters" />
+    <meta property="og:url" content="https://tool.pathgriho.com/calculators/age-calculator" />
     <!-- where do you want your post to link to -->
     <meta property="og:type" content="article" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -29,7 +29,7 @@
         gtag('config', 'G-S99SERZBKK');
     </script>
     <!-- Webpage Title -->
-    <title>ফুট থেকে মিটার</title>
+    <title>ওয়ার্ড কাউন্টার</title>
     <!-- Styles -->
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/fontawesome-all.css" rel="stylesheet">
@@ -96,8 +96,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>ফুট থেকে মিটার</h1>
-                    <p>এখানে আপনি ফুট থেকে মিটারে কনভার্ট করতে পারবেন।</p>
+                    <h1>ওয়ার্ড কাউন্টার</h1>
+                    <p>কোন লেখাতে শব্দ এবং অক্ষর সংখ্যা গণনা করুন সহজে!</p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -109,18 +109,22 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 ex-basic-1">
-                        <div class="text-container dark">
-                            <p>
-                                <label>ফুট</label>
-                                <input id="inputFeet" class="form-control" type="number" placeholder="Feet" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
-                              </p>
-                              <p>মিটার: <span id="outputMeters"></span></p>
-                              
-                              <script>
-                              function LengthConverter(valNum) {
-                                document.getElementById("outputMeters").innerHTML=valNum/3.2808;
-                              }
-                              </script>
+                        <div class="well">
+                            <h4>এখানে আপনার টেক্সট টাইপ করুন বা পেস্ট করুন:</h4>
+                            <textarea class="form-control" id="text" placeholder="এখানে লেখা শুরু করুন..." rows="10"
+                                style="resize: vertical;" oninput="countWord()"></textarea>
+        
+                            <div style="margin-top: 10px; margin-bottom: 10px;">
+                                <input id='undo' type='button' value='Undo' class="btn-primary" />
+                                <input id='redo' type='button' value='Redo' class="btn-warning" />
+                                <input onclick="document.getElementById('text').value = ''" type='button' value='Clear'
+                                    class="btn-danger" />
+                                <input id='save' type='button' value='Save' class="btn-success" />
+                            </div>
+                            <div class="well" style="text-align: center; font-size: 25px;">
+                                <span id="show"></span>
+                                <span id="she"></span>
+                            </div>
                         </div>
                     </div>
                     <div class="col-sm-4">
@@ -136,50 +140,63 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-container">
-                            <h2>ফুট থেকে মিটার যেভাবে নির্ণয় করবেন</h2>
+                            <h2>ওয়ার্ড কাউন্টার যেভাবে ব্যবহার করবেন</h2>
                             <p>
-                                ফুট থেকে মিটার এককে যদি পরিবর্তন করতে হয় তবে আমাদেরকে ফুট এককে যে সংখ্যাটি রয়েছে 
-                                তাকে 3.2808 দিয়ে ভাগ করতে হবে। ভাগফলই হবে ওই ফুট এককের মিটার একক।
+                                আমাদের দৈনন্দিন জীবনে বিভিন্ন লেখার অক্ষর কতগুলো হয়েছে বা শব্দ কতগুলো হয়েছে সেটা দেখার প্রয়োজন
+                                 পড়ে। যেমন আমরা অ্যাসাইনমেন্ট সাবমিট করতে গেলে আমাদের ওয়ার্ড সংখ্যা কতটুকু হয়েছে সেটা দেখার প্রয়োজন
+                                  অনেক সময় হয়। এক্ষেত্রে কিছু সময় দেখা যায় আমরা এমন কোথাও লেখাটা লিখেছি যেখান থেকে ঠিক ভাবে দেখা যায়
+                                   না যে শব্দ সংখ্যা কয়টি। আপনি লেখাটা সেখান থেকে কপি করে আমাদের এই টুলের মধ্যে পেস্ট করলে দেখতে পাবেন
+                                    লেখাটির ভিতর কতটি শব্দ বা অক্ষর রয়েছে।
                             </p>
                             <p>
-                                ধরুন আপনি একটি পরিমাপ গ্রহণ করেছেন এবং সেখান থেকে আপনি কোন কিছু দৈর্ঘ্য 5 
-                                ফুট পেয়েছেন। এখন আপনি চাচ্ছেন সেই দৈর্ঘ্যকে মিটারে রূপান্তর করতে। 
-                                এক্ষেত্রে অবশ্যই আপনাকে 5 কে 3.2808 দ্বারা ভাগ করতে হবে এবং ভাগফলই হবে মিটারে পরিবর্তিত 
-                                রূপ। সুতরাং 5 ফুট = (5/3.2808) = 1.5240 মিটার।
+                                আপনার যদি জানা থাকে কতগুলো শব্দ আপনি লেখাটিতে ব্যবহার করেছেন সে ক্ষেত্রে আপনি আলাদা একটি ধারণা পাবেন
+                                 আপনার লেখার বিস্তার সম্পর্কে। অধিকাংশ ক্ষেত্রে আমরা দেখতে পাই একটু বড় লেখা সবসময় কোন একটি টপিককে সহজে
+                                  এবং সঠিকভাবে বুঝাতে সাহায্য করে। এ জন্য কতগুলো শব্দ ব্যবহার করা হয়েছে সে সম্পর্কে ধারণা রাখাটা গুরুত্বপূর্ণ।
                             </p>
                         </div> <!-- end of text-container-->
 
                         <div class="text-container">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <h3>এক ফুট সমান কত মিটার?</h3>
+                                    <h3>ওয়ার্ড কাউন্টার যেভাবে কাজ করে:</h3>
                                     <p>
-                                        ১ ফুট = ০.৩০৪৮ মিটার। ০.৩০৪৮ মিটারে ১ ফুট। মূলত এই সূত্রকে কাজে লাগিয়ে আমরা 
-                                        ফুট থেকে মিটার এককে রূপান্তর করতে পারব। একইভাবে আমরা মিটার থেকে ফুট এককেও
-                                         রূপান্তর করতে পারব। এজন্য এই সূত্রটির মনে রাখতে হবে।
+                                        আপনি যদি কোন একটি লেখার শব্দ সংখ্যা হিসাব করতে চান তবে সেই লেখাটিতে 
+                                        যতগুলো শব্দ রয়েছে তার পরিমাণ দেখুন। সেটই হচ্ছে সেই লেখাটার শব্দ সংখ্যা 
+                                        এবং এই শব্দ চেনার জন্য আপনাকে অক্ষর গুলোর মধ্যে স্পেস দেখতে হবে। 
+                                        প্রতিটি শব্দ আলাদা আলাদা স্থানে অবস্থান করে, একত্রে নয়।
                                     </p>
                                     <p>
-                                        বিভিন্ন ক্ষেত্রে আমাদের ফিট থেকে মিটারে দৈর্ঘ্যতে পরিবর্তন করতে হয়। এজন্য অবশ্যই আমাদের
-                                         এই সূত্রটি কাজে লাগাতে হবে এবং এর মাধ্যমে আমরা ফিট থেকে মিটারে রূপান্তর করতে পারব।
+                                        এসকল বিষয় মাথায় রাখলে আপনি নিজে থেকেই শব্দ সংখ্যা গণনা করতে পারবেন। 
+                                        তবে অক্ষর সংখ্যা গণনা করতে হলে অনেক সময় প্রয়োজন হয়ে থাকে। যার জন্য এ 
+                                        ধরনের টুল ইউজ করাই বুদ্ধিমানের কাজ।
                                     </p>
                                 </div> <!-- end of col -->
                                 <div class="col-md-6">
                                     <div class="image-container-small">
-                                        <img class="img-fluid" src="/thumbnails/feet-to-meter.jpg" alt="ফুট থেকে মিটারে রূপান্তর">
+                                        <img class="img-fluid" src="/thumbnails/word-counter.jpg" alt="ওয়ার্ড কাউন্টার">
                                     </div> <!-- end of image-container-small -->
                                 </div> <!-- end of col -->
                             </div> <!-- end of row -->
                         </div> <!-- end of text-container -->
-                        <table class="table"><tbody><tr><th>ফুট</th><th>মিটার</th></tr><tr><td>১</td><td>০.৩০৪৮</td></tr><tr><td>২</td><td>০.৬০৯৬</td></tr><tr><td>৫</td><td>১.৫২৪০</td></tr><tr><td>১০</td><td>৩.০৪৮০</td></tr><tr><td>১৫</td><td>৪.৫৭২১</td></tr><tr><td>২০</td><td>৬.০৯৬১</td></tr><tr><td>২৫</td><td>৭.৬২০১</td></tr><tr><td>১০০</td><td>৩০.৪৮০৪</td></tr><tr><td>২০০</td><td>৬০.৯৬০৭</td></tr><tr><td>৫০০</td><td>১৫২.৪০১৯</td></tr></tbody></table>
+
                         <div class="text-container dark">
                             <p class="testimonial-text">
-                                ধরুন আপনি একটি পরিমাপ গ্রহণ করেছেন এবং সেখান থেকে আপনি কোন কিছু দৈর্ঘ্য ১০ 
-                                ফুট পেয়েছেন। এখন আপনি চাচ্ছেন সেই দৈর্ঘ্যকে মিটারে রূপান্তর করতে। 
-                                এক্ষেত্রে অবশ্যই আপনাকে ১০ কে ৩.২৮০৮ দ্বারা ভাগ করতে হবে এবং ভাগফলই হবে মিটারে পরিবর্তিত 
-                                রূপ। সুতরাং ১০ ফুট = (10/3.2808) = 3.048037 মিটার।
+                                ধরুন আপনি একটি লাইন কপি করে নিয়ে এসেছেন যেটায় লেখা রয়েছে "Pathgriho word counter" সুতরাং মোটমাট শব্দ রয়েছে ৩ টি ও অক্ষর
+                                রয়েছে ২২ টি।
                             </p>
                         </div> <!-- end of text container -->
-                        <a class="btn-solid-reg" href="/Conversion/">সব কনভার্টার</a>
+
+                        <div class="text-container last">
+                            <h3>ওয়ার্ড কাউন্টার কতটা নির্ভুল?</h3>
+                            <p>
+                                সারা পৃথিবী জুড়ে বিভিন্ন ভাষা রয়েছে এবং এই ভাষাগুলোর অক্ষরে অনেক ধরনের শব্দ রয়েছে যেগুলো আসলে পূর্ণ শব্দ নয়।
+                                 সেক্ষেত্রে ওয়ার্ড কাউন্টর সফটওয়্যারগুলো এগুলোকে শব্দ হিসেবে ধরলেও প্রকৃতপক্ষে এগুলো শব্দ হিসেবে ব্যবহার করা হয় না
+                                  সে ক্ষেত্রে অধিকাংশ সফটওয়্যারগুলো ভুল তথ্য প্রদর্শন করে থাকে। তবে অধিকাংশ ক্ষেত্রে দেখা যায় এই ভুলগুলো খুবই কম 
+                                  ঘটে থাকে। কেননা ওই ধরনের শব্দগুলো ভাষাতে খুব অল্প পরিমাণে ব্যবহার করা হয়ে থাকে। এজন্য আপনি চাইলে সাধারণ কাজের
+                                   জন্য ওয়ার্ড কাউন্টার গুলো ব্যবহার করতে পারেন।
+                            </p>
+                        </div> <!-- end of text-container -->
+                        <a class="btn-solid-reg" href="/Productivity/">সকল প্রডাক্টিভিটি টুল</a>
                     </div> <!-- end of col-->
                 </div> <!-- end of row -->
             </div> <!-- end of container -->
@@ -192,8 +209,8 @@
                     <div class="col-lg-12">
                         <div class="breadcrumbs">
                             <a href="/index.html">Home</a><i class="fa fa-angle-double-right"></i><a
-                                href="/Conversion/">Conversion</a><i
-                                class="fa fa-angle-double-right"></i><span>Feet To Meter</span>
+                                href="/Productivity/">Productivity</a><i
+                                class="fa fa-angle-double-right"></i><span>Word Counter</span>
                         </div> <!-- end of breadcrumbs -->
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
@@ -299,6 +316,7 @@
         </div> <!-- end of copyright -->
         <!-- end of copyright -->
         <!-- Scripts -->
+        <script src="/scripts.js/wordcounter.js"></script>
 
         <script src="/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
         <script src="/js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
@@ -321,13 +339,13 @@
               },{
                 "@type": "ListItem", 
                 "position": 2, 
-                "name": "Conversion",
-                "item": "https://tool.pathgriho.com/Conversion"  
+                "name": "Productivity",
+                "item": "https://tool.pathgriho.com/Productivity"  
               },{
                 "@type": "ListItem", 
                 "position": 3, 
-                "name": "বয়স ক্যালকুলেটর",
-                "item": "https://tool.pathgriho.com/Conversion/feet-to-meters"  
+                "name": "ওয়ার্ড কাউন্টার",
+                "item": "https://tool.pathgriho.com/Productivity/word-counter.html"  
               }]
             }
             </script>
